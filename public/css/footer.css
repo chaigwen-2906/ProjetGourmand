@@ -1,0 +1,144 @@
+footer
+{
+    background-color:rgb(112, 17, 31);  
+    width: 100%;
+    margin: 0 auto;   
+    text-align: center; 
+    color:#7c7474c5 ;
+    padding-bottom: 5px;
+}
+
+/* Bloc Réseaux sociaux  / Social Network Block*/
+footer .reseaux
+{
+    padding-bottom: 30px;
+    padding-top: 10px;
+}
+/* Bloc Menu du footer + Mentions légales / Footer menu block + Legal notice*/
+.reseaux .ulReseau
+{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding:0;
+    justify-content: space-around;
+    width: 40%;
+    height: 40px;
+    margin-top: 10px;
+    list-style-type: none;/*enlèvelespuces*/
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.ulReseau img
+{
+    width: 60px;
+}
+/* Bloc Menu du  / Footer menu block */
+.menuFooter
+{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.menuFooter nav
+{
+    width: 300px;
+    border-right: 1px solid white;
+}
+.menuFooter ul
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menuFooter ul li
+{
+    width:260px;
+    text-align: left;
+    list-style-type: none;
+}
+.menuFooter ul li a
+{
+    color: white;
+    text-decoration: none;
+    line-height: 1.5rem;
+    background-image: url('../images/images/footer-list.png');
+    background-repeat: no-repeat;
+    background-position: left 5px;
+    padding-left: 30px;
+}
+
+/* Bloc Mentions  / Block Legal notice */
+.mention 
+{
+    width:300px;
+    display: flex;
+    flex-direction: column;
+}
+.mention a
+{
+    text-decoration: none;
+    color: white;
+    margin: 2px;
+}
+.copyright p
+{
+    color:white ;
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+
+
+
+/*---------------media querie tablette------------*/
+@media screen and (max-width: 992px)
+{
+    /* On passe le bloc menu du footer + Mentions légales en mode colonne.
+        We pass the footer menu block + Legal notice in column mode */
+    footer .reseaux .ulReseau
+    {
+        width: 100%;
+    }
+    /* On modifie le border du bloc menu du footer / We modify the border of the menu block of the footer */
+    footer .menuFooter
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .menuFooter nav 
+    {
+        border-right:none;
+        border-bottom: 1px solid white;
+        margin-bottom: 10px;
+    }
+    .menuFooter ul li 
+    {
+        width: 150px;
+    }
+
+}
+
+/*-------------media querie mobile----------------*/
+    @media screen and (max-width:576px)
+{
+    footer #MentionFooter
+    {
+        width: 90%;
+    
+    }
+    .reseaux .mention
+    {
+        flex-direction: column;
+    }
+    .ulReseau img {
+        width: 50px;
+    }
+
+}
+

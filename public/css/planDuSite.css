@@ -1,0 +1,18 @@
+#planDuSite ul
+{
+    text-align: left;
+
+}
+.plan
+{
+    background-color: white;
+    width: 50%;
+    margin: auto;
+    border-radius: 10px;
+}
+.plan a
+{
+    color: black;
+    font-style: italic;
+    font-size: 1.1rem;
+}

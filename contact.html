@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="keywords" content="contact">
+        <meta name="description" content="Les fins gourmets - nous contacter">
+        <meta name="title" content="Les fins gourmets - nous contacter">
+
+        <title>Les fins gourmets - Contact</title>
+
+        <!-- Appel des feuilles de style --/ Calling style sheets-->
+        <!--<link rel="stylesheet" href="public/css/header.css">
+        <link rel="stylesheet" href="public/css/footer.css">
+        <link rel="stylesheet" href="public/css/contact.css">-->
+        <link rel="stylesheet" href="public/css/styles.css"  type="text/css" media="screen" >
+
+         <!---bootstrap-->
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+          <!--appel à fonttawesome-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+         
+    </head>
+    <body>
+        <div id="cookies">
+            <span>
+                <!-- balise b : mets en gras -->
+                <b>En continuant de défiler</b>, vous acceptez l'utilisation de services tiers pouvant installer des cookies
+            </span>
+            <a id="BtnCookieAccepter" class="accepter"> ✓ Ok, tout accepter</a>
+            <a class="savoirPlus" href="https://www.cnil.fr/fr/site-web-cookies-et-autres-traceurs" target="_blank">En savoir plus</a>
+        </div>
+        <a id="retourHaut" class="RetourHautPage"><img class="imgRetourHautPage" src="public/images/images/fleche_haut.png"></a>
+        <!--boite Modal-->
+        <div id="myModalConnecter" class="modal fade" role="dialog">
+            <div class="modal-dialog"> 
+                <!-- Modal content---------->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title"> Connectez-vous à votre compte</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                     <div class="modal-body">
+                        <form>
+                            <figure>
+                                <label class="bntAligne" for="email"> E-mail </label>
+                                <input type="email" name="email" id="mail_modal"required ><br />
+                                <span id="errorMailConnecte"></span>
+                            </figure>
+                            <figure>
+                                <label class="bntAligne" for="motDePasse"> Mot de passe </label>
+                                <input type="password" name="motDePasse" id="motDePasse"required ><br />
+                                <span id="errorMotDePasse"></span>
+                            </figure>
+                            <a href="#">Mot de passe oublié ? </a>
+                            <input class="boutonConnexion" id="modal_get" type="submit" value="Se connecter">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <header class="container-fluid">
+                <div class="container divTaille" >
+                    <div class="row">
+                        <div class="col-12 col-md-2 " id="top">
+                            <img class="img-fluid" src="public/images/logos/les-fins-gourmets.png" alt="logo" >  
+                        </div>         
+                        <div class="col-12 col-md-7 divMenu">
+                            <nav class="navbar navbar-expand-md bg-dark grey  navbar-dark btnMenu">
+                                <!-- Toggler/collapsibe Button ///    bouton-->
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                                        <span class="navbar-toggler-icon"></span>
+                                </button>
+    
+                                <!-- Links -->
+                                <div class="collapse navbar-collapse monMenu" id="collapsibleNavbar">
+                                    <ul id="conteneurMenu"  class="navbar-nav ulMenuBandeau">
+                                        <li class="nav-item ml-2 mr-2">
+                                            <a class="nav-link text-light" href="index.html">Accueil</a>            
+                                        </li>
+                                        <li class="nav-item ml-2 mr-2">
+                                            <a class="nav-link text-light" href="notreMarque.html">Notre marque</a>
+                                        </li><!-----------------<--menu déroulant-->
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link text-light dropdown-toggle" href="nosProduits.html" id="navbardrop" data-toggle="dropdown">
+                                                Nos produits
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="nosProduits.html#LesPates">
+                                                Les pâtes
+                                                </a>
+                                                <a class="dropdown-item" href="nosProduits.html#LesFruits">
+                                                Les fruits exotiques
+                                                </a>
+                                                <a class="dropdown-item" href="nosProduits.html#LesEpices">
+                                                Les épices
+                                                </a>
+                                                <a class="dropdown-item" href="nosProduits.html#LesLegumes">
+                                                    Les Légumes
+                                                </a>
+                                            </div>
+                                        </li> <!--fin du menu déroulant-->
+                                        <li class="nav-item ml-2 mr-2">
+                                            <a class="nav-link text-light" href="nosFormations.html">Nos formations</a>
+                                        </li>
+                                        <li class="nav-item ml-2 mr-2">
+                                            <a class="nav-link text-light" href="contact.html">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>    
+                        <div class="col-12 col-md-3  divBtnConnextion">
+                            <figure id="bloc_connexion" class="connexion text-light">  
+                                <a href="creezVotreCompte.html" class="identification">Créez votre compte</a>
+                                <a href="connecter.html" data-toggle="modal" data-target="#myModalConnecter"  class="identification">Se
+                                    connecter</a>
+                            </figure>
+                            <!-- Bloc déconnexion - s'affiche en mode connecté -->
+                            <figure id="bloc_deconnexion" class="deconnexion text-light">
+                                <p>
+                                    Bonjour Lemoine Gwénola
+                                </p>
+                                <img id="boutonPanier" class="imgPanier" src="public/images/images/panier.png" alt="Mon panier" title="Mon panier">
+                                <a href="index.html" class="fermer" id="btnSeDeconnecter" >Se déconnecter</a>
+                            </figure>
+                        </div>
+                    </div>        
+                </div>
+            </div>
+        </header>
+        <div id="laPage">
+            <main id="contact">
+                <form id="formContact" >
+                    <h1>
+                        Les fins gourmets
+                    </h1>
+                    <fieldset>
+                        <legend>
+                            Vos coordonnées
+                        </legend>
+                        <div class="contact2colonnes">
+                            <div class="contact1">
+                                <div class="MouMme">
+                                    <div>
+                                        <input type="radio" name="Civilite" value="monsieur" id="monsieur">
+                                        <label for="monsieur" class="petit">M</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="Civilite" value="madame" id="madame">
+                                        <label for="madame" class="petit">Mme</label>
+                                    </div>  
+                                </div> 
+                                <p>
+                                    <label for="nom">Votre nom</label>  <!--required = champs obligatoire----le champs -->
+                                    <input type="text"nane="nom" id="nom" placeholder="Taper votre nom" maxlength="20"required /><br>
+                                    <span id="errorNom"></span>
+                                </p>
+                                <p>
+                                    <label for="prenom">Votre prénom</label>
+                                    <input type="text" name="prenom" id="prenom" placeholder="Taper votre prénom" required/><br>
+                                    <span id="errorPrenom"></span>
+                                </p>
+                                <p>
+                                    <label for="email">Votre email </label>
+                                    <input type="email" name="email" id="e_mail" placeholder="Taper votre email"required/><br> 
+                                    <span id="error_Mail"></span>   
+                                </p>
+                                <p>
+                                    <label for="mobile">Votre téléphone</label>
+                                    <input type="tel" name="mobile" id="Mobile" placeholder="Taper votre numéro"required/><br> 
+                                    <span id="errorMobile"></span>   
+                                </p>
+                            </div>    
+                            <div class="contact2">
+                                <p>     
+                                    <label for="adresse">Votre adresse</label>
+                                    <textarea  name="adresse" id="adresse" placeholder="Taper votre adresse"></textarea>       
+                                </p>
+                                <p>     
+                                    <label for="message">Votre message</label>
+                                    <textarea  name="message" id="message" placeholder="Taper votre message"></textarea>       
+                                </p>
+                            </div>
+                        </div>    
+                    </fieldset>
+                    <!--bouton pour envoyer le formulaire ou annuler / button to send the form or cancel-->
+                    <p class="bouton" >
+                        <input class="btnContact" id="contact_get" type="submit" value="Envoyer">
+                        <input class="btnContact" id="annuler" type="reset" value="Annuler">
+                    </p>
+                </form>
+                <section class="adresseInfo">
+                    <article class="adresse">
+                        <address>
+                            <span class="titreadresse">Les fins gourmets</span><br>
+                            13 rue du scorf<br>
+                            566690 Landevant<br>
+                            tél : 02 98 22 22 22<br>
+                            email:chaigwen@hotmail.fr
+                        </address>
+                        <img src="public/images/images/table.jpg">
+                    </article>
+                    <map class="map">
+                        <address class="ouSuisJe">
+                            Plan d'accès
+                        </address>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2681.8216898796923!2d-3.120643484363977!3d47.765512879195576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4810410604462393%3A0x85551060753b5c00!2s4%20Rue%20du%20Narbond%2C%2056690%20Land%C3%A9vant!5e0!3m2!1sfr!2sfr!4v1574688319040!5m2!1sfr!2sfr"
+                        frameborder="0" allowfullscreen=""></iframe>
+                    </map> 
+                </section>
+            </main>
+            <footer id="MentionFooter">
+                    <!-- Menu du footer -->
+                    <div class="reseaux">
+                        <!-- Réseaux sociaux -->
+                        <ul class="ulReseau">
+                            <!-- target="_blank" => ouvre dans un nouvel onglet--> 
+                            <li><a href="https://www.facebook.com/" target="_blank"><img src="public/images/reseaux/facebook.png" alt="facebook" title="facebook"></a></li>
+                            <li><a href="https://www.instagram.com/" target="_blank"><img src="public/images/reseaux/instagram.png" alt="Instagram" title="Instagram"></a></li>
+                            <li><a href="https://twitter.com/accueil?lang=fr" target="_blank"><img src="public/images/reseaux/twitter.png" alt="twitter" title="twitter"> </a></li>
+                        </ul>
+                    </div>
+                    <div class="menuFooter">
+                        <nav>
+                            <ul>
+                                <li><a href="#">Evènements</a></li>
+                                <li><a href="#">Le nouveau bio</a></li>
+                                <li><a href="#">Notre formateur</a></li>
+                                <li><a href="#">Blog</a></li>
+                            </ul>
+                        </nav>
+                        <!-- Mentions légales --> 
+                        <p class="mention">
+                            <a href="mentionsLegales.html">Mentions Legales </a>
+                            <a href="ConditionsGénérales.html">Conditions générales</a>
+                            <a href="RGPD.html">RGPD</a>
+                            <a href="planDuSite.html">Plan du site</a>    
+                        </p>
+                    </div>
+                    <div class="copyright">    
+                        <p>
+                            &copy; Les fins Gourmets 2019 / Développeur web: Lemoine Gwénola
+                        </p>
+                    </div>
+                    
+                 </div><!--fin de #page-->
+            </footer>
+      
+        <!--<script type="text/javascript" src="public/js/optimiser.js" defer></script>-->
+        <script type="text/javascript" src="public/js/header.js"></script> 
+        <script type="text/javascript" src="public/js/contact.js"></script>
+        
+
+        <!--class active-->
+        <script type= "text/javascript">
+            menuActive(4);
+        </script>
+       
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+        </script> 
+    </body>
+</html>

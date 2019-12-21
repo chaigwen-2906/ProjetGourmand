@@ -1,0 +1,333 @@
+
+#accueil  
+{
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Slider */
+#accueil .sectionSlider
+{
+   width: 80%;
+   position: relative;
+   
+}
+ .sectionSlider img
+{
+   width: 100%;
+   
+}
+#accueil .sectionSlider:hover .imgGauche
+{
+    display: block;
+
+
+}
+#accueil .sectionSlider:hover .imgDroite
+{
+    display: block;
+
+
+}
+#accueil .sectionSlider .imgGauche 
+{
+    width: 5%;
+    position: absolute;
+    top: 40%;
+    left:10px ;
+    cursor: pointer;
+    display: none;
+    opacity: 0.6;
+}
+#accueil .sectionSlider .imgDroite 
+{
+    
+    width: 5%;
+    position: absolute;
+    top: 40%;
+    right: 10px;
+    cursor: pointer;
+    display: none;
+    opacity: 0.6;
+}
+
+
+/* Contenu principal / Main content*/
+#accueil .contenuPrincipal
+{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+/* Bloc présentation des produits / Product presentation block*/
+#accueil .presentation
+{
+    width: 70%;
+    min-width: 320px;
+    margin-right: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 5px solid rgb(112, 17, 31);
+    background-color: #e0dbdbc5;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+#accueil .presentation article
+{
+    width: 380px;
+}
+#accueil .titre
+{
+    width: 100%;
+    color: rgb(112, 17, 31);
+    text-align: center;
+    margin: 10px;
+    padding-top: 15px;
+}
+#accueil .presentation article figure
+{
+    position: relative;
+}
+#accueil .presentation article figure img
+{
+    width: 100%;
+}
+
+/* Positionnement du titre dans l'image / Positioning the title in the image*/
+#accueil .presentation .TitreArticle
+{
+    display: none;
+    position: absolute;
+    width: 100%;
+    opacity: 0.6;
+    top: 60px;
+    background-color: rgb(167, 132, 132);
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Affichage du titre au survol des image / Displaying the title when the image is flown*/
+#accueil .unArticle:hover .TitreArticle
+{
+    display: block;
+}
+/* FIN Bloc présentation des produits / END Product presentation block */
+
+
+/* Bloc formations aside / Training block aside */
+.formation
+{
+    border: 5px groove rgb(112, 17, 31);
+    background-color: #7c7474c5;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 15px ;
+    -webkit-border-radius: 15px ;
+    -moz-border-radius: 15px ;
+    -ms-border-radius: 15px ;
+    -o-border-radius: 15px ;
+}
+/* aside*/
+#accueil .propos
+{
+    background-color: #e0dbdbc5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius:15px;
+    border: 5px solid rgb(112, 17, 31);
+    -webkit-border-radius:15px;
+    -moz-border-radius:15px;
+    -ms-border-radius:15px;
+    -o-border-radius:15px;
+}
+.propos h3
+{
+    color: rgb(112, 17, 31);
+    text-align: center;
+    line-height: 1.8rem;
+}
+#accueil .propos article
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+}
+#accueil .propos article img
+{
+    width: 250px;
+}
+.propos p
+{
+    text-align: center;
+    line-height: 1.8rem;
+    margin: 0 auto;
+}
+/* FIN Bloc formations aside / en block aside */
+
+
+
+/* Bloc vidéos / Block videos */
+.videos
+{
+    width: 100%;
+    background-color:#9e9292c5 ;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px ;
+    margin-bottom: 15px ;
+}
+.videos h3
+{
+    color: rgb(112, 17, 31);
+    text-decoration: underline;
+    text-align: center;
+    font-size: 1.4rem;
+    margin-top: 25px; 
+}
+.videoTek
+{
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 25px;
+    padding: 15px 0;
+}
+.videoTek video
+{
+    margin: 5px;
+    width: 200px;
+}
+/*------------------- FIN Bloc vidéos /END Block videos------------- */
+
+
+
+@media screen and (max-width: 1020px)
+{
+    .formation
+    {
+        width: 70%;
+        min-width: 320px;
+        margin-top: 10px;
+    }
+}
+
+
+/*---------------media querie tablette------------*/
+@media screen and (max-width: 992px)
+{
+    /* On masque le slider */
+    #accueil .sectionSlider
+    {
+        display: none;
+    }
+    /* On ajoute une marge au dessous du bloc présentation des produits  / A margin is added below the product presentation block*/
+    #accueil .presentation
+    {
+        margin-bottom: 15px;
+    }
+    #accueil .presentation .TitreArticle
+    {
+        display: block;
+    }
+    #accueil .contenuPrincipal
+    {
+        flex-wrap: wrap;
+    }
+    #accueil .contenuPrincipal aside
+    {
+        width: 70%;
+        min-width: 320px;
+    }
+    /* On adaptate la largeur du bloc formation (aside)  / We adapt the width of the formation block (aside)*/
+    .formation
+    {
+        width: 70%;
+    }
+    /* On adapte le contenu des articles du bloc formation (aside)/ We adapt the contents of the articles of the formation block (aside) */
+    #accueil .propos article
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .videoTek
+    {
+        width: 70%;
+        display: block;
+    }
+
+}
+
+
+
+
+/*-------------media querie mobile----------------*/
+@media screen and (max-width:576px)
+{
+    /* On adapte le bloc présentation des produits / We adapt the product presentation block*/
+    #accueil .presentation
+    {
+        margin-bottom: 15px;
+        min-width: 260px;
+    }
+    #accueil .contenuPrincipal
+    {
+        margin-bottom: 15px;
+    }
+    #accueil .contenuPrincipal aside
+    {
+        min-width: 260px;
+    }
+    #accueil .presentation article
+    {
+        width: 240px;
+    }
+
+    /* On adapte le bloc formation (aside) / We adapt the training block (aside)*/
+    .formation
+    {
+        min-width: 260px;
+    }
+    #accueil .propos article
+    {
+        width: 240px;
+    }
+    #accueil .propos article img
+    {
+        width: 200px;
+    }
+    .videos
+    {
+        display: none;
+    }
+    
+}
+
+/* Style de la page 404*/
+.erreur404
+{
+    width: 40%;
+    padding-bottom: 10px;
+    display: flex;
+    margin: 0 auto;
+}
+/*style de la page déconnection*/
+#deconnection
+{
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="keywords" content="inscription">
+        <meta name="description" content="Les fins gourmets - Inscription">
+        <meta name="title" content="Les fins gourmets - Inscription">
+
+        <title>Les fins gourmets - Créez votre compte</title>
+
+        <!-- Appel des feuilles de style --/ Calling style sheets-->
+        <!--<link rel="stylesheet" href="public/css/header.css">
+        <link rel="stylesheet" href="public/css/footer.css">
+        <link rel="stylesheet" href="public/css/creezVotreCompte.css">-->
+        <link rel="stylesheet" href="public/css/styles.css"  type="text/css" media="screen" >
+
+         <!---bootstrap-->
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+          <!--appel à fonttawesome-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+         
+    </head>
+    <body>
+        <div id="cookies">
+            <span>
+                <!-- balise b : mets en gras -->
+                <b>En continuant de défiler</b>, vous acceptez l'utilisation de services tiers pouvant installer des cookies
+            </span>
+            <a id="BtnCookieAccepter" class="accepter"> ✓ Ok, tout accepter</a>
+            <a class="savoirPlus" href="https://www.cnil.fr/fr/site-web-cookies-et-autres-traceurs" target="_blank">En savoir plus</a>
+        </div>
+        <a id="retourHaut" class="RetourHautPage"><img class="imgRetourHautPage" src="public/images/images/fleche_haut.png"></a>
+        <!--boite Modal-->
+        <div id="myModalConnecter" class="modal fade" role="dialog">
+            <div class="modal-dialog"> 
+                <!-- Modal content---------->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title"> Connectez-vous à votre compte</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                     <div class="modal-body">
+                        <form>
+                            <figure>
+                                <label class="bntAligne" for="email"> E-mail </label>
+                                <input type="email" name="email" id="mail_modal"required ><br />
+                                <span id="errorMailConnecte"></span>
+                            </figure>
+                            <figure>
+                                <label class="bntAligne" for="motDePasse"> Mot de passe </label>
+                                <input type="password" name="motDePasse" id="motDePasse"required ><br />
+                                <span id="errorMotDePasse"></span>
+                            </figure>
+                            <a href="#">Mot de passe oublié ? </a>
+                            <input class="boutonConnexion" id="modal_get" type="submit" value="Se connecter">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <header class="container-fluid">
+                <div class="container divTaille" >
+                    <div class="row">
+                        <div class="col-12 col-md-2 " id="top">
+                            <img class="img-fluid" src="public/images/logos/les-fins-gourmets.png" alt="logo" >  
+                        </div>         
+                        <div class="col-12 col-md-7 divMenu">
+                            <nav class="navbar navbar-expand-md bg-dark grey  navbar-dark btnMenu">
+                                <!-- Toggler/collapsibe Button ///    bouton-->
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                                        <span class="navbar-toggler-icon"></span>
+                                </button>
+    
+                                <!-- Links -->
+                                <div class="collapse navbar-collapse monMenu" id="collapsibleNavbar">
+                                    <ul id="conteneurMenu" class="navbar-nav ulMenuBandeau">
+                                        <li class="nav-item ml-2 mr-2">
+                                            <a class="nav-link text-light" href="index.html">Accueil</a>            
+                                        </li>
+                                        <li class="nav-item ml-2 mr-2">
+                                            <a class="nav-link text-light" href="notreMarque.html">Notre marque</a>
+                                        </li><!-----------------<--menu déroulant-->
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link text-light dropdown-toggle" href="nosProduits.html" id="navbardrop" data-toggle="dropdown">
+                                                Nos produits
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="nosProduits.html#LesPates">
+                                                Les pâtes
+                                                </a>
+                                                <a class="dropdown-item" href="nosProduits.html#LesFruits">
+                                                Les fruits exotiques
+                                                </a>
+                                                <a class="dropdown-item" href="nosProduits.html#LesEpices">
+                                                Les épices
+                                                </a>
+                                                <a class="dropdown-item" href="nosProduits.html#LesLegumes">
+                                                    Les Légumes
+                                                </a>
+                                            </div>
+                                        </li> <!--fin du menu déroulant-->
+                                        <li class="nav-item ml-2 mr-2">
+                                            <a class="nav-link text-light" href="nosFormations.html">Nos formations</a>
+                                        </li>
+                                        <li class="nav-item ml-2 mr-2">
+                                            <a class="nav-link text-light" href="contact.html">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>    
+                        <div class="col-12 col-md-3  divBtnConnextion">
+                            <figure id="bloc_connexion" class="connexion text-light">  
+                                <a href="creezVotreCompte.html" class="identification">Créez votre compte</a>
+                                <a href="connecter.html" data-toggle="modal" data-target="#myModalConnecter"  class="identification">Se
+                                    connecter</a>
+                            </figure>
+                            <!-- Bloc déconnexion - s'affiche en mode connecté -->
+                            <figure id="bloc_deconnexion" class="deconnexion text-light">
+                                <p>
+                                    Bonjour Lemoine Gwénola
+                                </p>
+                                <img id="boutonPanier" class="imgPanier" src="public/images/images/panier.png" alt="Mon panier" title="Mon panier">
+                                <a href="index.html" class="fermer" id="btnSeDeconnecter" >Se déconnecter</a>
+                            </figure>
+                        </div>
+                    </div>        
+                </div>
+            </div>
+        </header>
+        <div id="laPage">
+            <main id="VotreCompte">
+                <form id="creezVotreCompte" action="#" method="post">
+                    <fieldset>
+                        <legend>
+                            Vos coordonnées
+                        </legend>
+                        <div class="contact3">
+                            <div class="MouMme">
+                                <div>
+                                    <input type="radio" name="Civilite" value="monsieur" id="monsieur">
+                                    <label for="monsieur" class="petit">M</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="Civilite" value="madame" id="madame">
+                                    <label for="madame" class="petit">Mme</label>
+                                </div>   
+                            </div>
+                            <p>
+                                <label for="nom">Votre nom</label>
+                                <input type="text"nane="nom" id="nomCreez" placeholder="Taper votre nom" required/>
+                                <span id="errorNomCreez"></span>
+                            </p>
+                            <p>
+                                <label for="prenom">Votre prénom</label>
+                                <input type="text" name="prenom" id="prenomCreez" placeholder="Taper votre prénom" required/>
+                                <span id="errorPrenomCreez"></span>
+                            </p>
+                            <p>
+                                <label for="email">Votre E-mail </label>
+                                <input type="email" name="email" id="emailCreez" placeholder="Taper votre email" required/>
+                                <span id="errorMailCreez"></span>    
+                            </p>
+                            <p>
+                                <label for="mobile">Votre téléphone</label>
+                                <input type="tel" name="mobile" id="mobileCreez" placeholder="Taper numéro" required/>
+                                <span id="errorMobileCreez"></span>    
+                            </p>
+                            <p>
+                                <label for="motDePasse">Votre password</label>
+                                <input type="password" name="motDePasse" id="motDePasseCreez" placeholder="Mot de passe" required/>
+                                <span id="errorMotDePasseCreez"></span>    
+                            </p>
+                            <p>
+                                <label for="motDePasseConfirm">Confirmé votre password</label>
+                                <input type="password" name="motDePasseConfirm" id="motDePasseConfirm" placeholder=" Confirmation du mot de passe"required/>
+                                <span id="errorMotDePasseConfirm"></span>    
+                            </p>
+                            <p>
+                                <label for="date">Votre date de naissance</label>
+                                <input type="date" name="date" id="dateCreez" placeholder="Ex: 31/06/2019"required/>    
+                                <span id="errorDateCreez"></span>
+                            </p>
+                        </div>
+                        <div class="confidentialite">
+                            <div>
+                                <input type="checkbox" name="offres" id="offres">
+                                <label for="offres">
+                                    Les offres de nos partenaires
+                                </label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name=" newsletter" id=" newsletter">
+                                <label for=" newsletter">
+                                    Recevoir notre newsletter
+                                    Vous pouvez vous désinscrire à tout moment
+                                    par simple demande par mail à chaigwen@hotmail.fr.
+                                </label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="conditionsUtilisation" id="conditionsUtilisation">
+                                <label for="conditionsUtilisation">
+                                    J'accepte les conditions d'utilisation et la politique de confidentialité
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <!--bouton pour envoyer le formulaire ou annuler-->
+                    <p class="bntCreer">
+                        <input class="bouton" id="boutonEnvoyerCreez" type="submit" value="envoyer">
+                        <input class="bouton" id="annuler" type="reset" value="Annuler">
+                    </p>    
+                </form>    
+            </main>    
+            <footer id="MentionFooter">
+                    <!-- Menu du footer -->
+                    <div class="reseaux">
+                        <!-- Réseaux sociaux -->
+                        <ul class="ulReseau">
+                            <!-- target="_blank" => ouvre dans un nouvel onglet--> 
+                            <li><a href="https://www.facebook.com/" target="_blank"><img src="public/images/reseaux/facebook.png" alt="facebook" title="facebook"></a></li>
+                            <li><a href="https://www.instagram.com/" target="_blank"><img src="public/images/reseaux/instagram.png" alt="Instagram" title="Instagram"></a></li>
+                            <li><a href="https://twitter.com/accueil?lang=fr" target="_blank"><img src="public/images/reseaux/twitter.png" alt="twitter" title="twitter"> </a></li>
+                        </ul>
+                    </div>
+                    <div class="menuFooter">
+                        <nav>
+                            <ul>
+                                <li><a href="#">Evènements</a></li>
+                                <li><a href="#">Le nouveau bio</a></li>
+                                <li><a href="#">Notre formateur</a></li>
+                                <li><a href="#">Blog</a></li>
+                            </ul>
+                        </nav>
+                        <!-- Mentions légales --> 
+                        <p class="mention">
+                            <a href="mentionsLegales.html">Mentions Legales </a>
+                            <a href="ConditionsGénérales.html">Conditions générales</a>
+                            <a href="RGPD.html">RGPD</a>
+                            <a href="planDuSite.html">Plan du site</a>    
+                        </p>
+                    </div>
+                    <div class="copyright">    
+                        <p>
+                            &copy; Les fins Gourmets 2019 / Développeur web: Lemoine Gwénola
+                        </p>
+                    </div>
+            </footer>
+        </div><!--fin de #page-->
+        
+        <!--<script type="text/javascript" src="public/js/optimiser.js" defer></script>-->
+        <script type="text/javascript" src="public/js/header.js"></script>
+        <script type="text/javascript" src="public/js/creezVotreCompte.js"></script>
+        
+
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+        </script> 
+    </body>
+</html>

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="keywords" content="produit">
+        <meta name="description" content="Les fins gourmets - N0os produits">
+        <meta name="title" content="Les fins gourmets - Nos produits">
+
+        <title>Les fins gourmets - Nos produits</title>
+
+        <!-- Appel des feuilles de style --/ Calling style sheets-->
+        <!--<link rel="stylesheet" href="public/css/header.css">
+        <link rel="stylesheet" href="public/css/footer.css">
+        <link rel="stylesheet" href="public/css/nosProduits.css">-->
+        <link rel="stylesheet" href="public/css/styles.css"  type="text/css" media="screen"
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+         <!--appel à fonttawesome-->
+         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+         
+    </head>
+    <body>
+        <div id="cookies">
+            <span>
+                <!-- balise b : mets en gras -->
+                <b>En continuant de défiler</b>, vous acceptez l'utilisation de services tiers pouvant installer des cookies
+            </span>
+            <a id="BtnCookieAccepter" class="accepter"> ✓ Ok, tout accepter</a>
+            <a class="savoirPlus" href="https://www.cnil.fr/fr/site-web-cookies-et-autres-traceurs" target="_blank">En savoir plus</a>
+        </div>
+        <a id="retourHaut" class="RetourHautPage" href="#"><img class="imgRetourHautPage" src="public/images/images/fleche_haut.png"></a>
+        <!--boite Modal-->
+        <div id="myModalConnecter" class="modal fade" role="dialog">
+            <div class="modal-dialog"> 
+                <!-- Modal content---------->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title"> Connectez-vous à votre compte</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                     <div class="modal-body">
+                        <form>
+                            <figure>
+                                <label class="bntAligne" for="email"> E-mail </label>
+                                <input type="email" name="email" id="mail_modal"required ><br />
+                                <span id="errorMailConnecte"></span>
+                            </figure>
+                            <figure>
+                                <label class="bntAligne" for="motDePasse"> Mot de passe </label>
+                                <input type="password" name="motDePasse" id="motDePasse"required ><br />
+                                <span id="errorMotDePasse"></span>
+                            </figure>
+                            <a href="#">Mot de passe oublié ? </a>
+                            <input class="boutonConnexion" id="modal_get" type="submit" value="Se connecter">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <header class="container-fluid">
+                <div class="container divTaille" >
+                    <div class="row">
+                        <div class="col-12 col-md-2 " id="top">
+                            <img class="img-fluid" src="public/images/logos/les-fins-gourmets.png" alt="logo" >  
+                        </div>         
+                        <div class="col-12 col-md-7 divMenu">
+                            <nav class="navbar navbar-expand-md bg-dark grey  navbar-dark btnMenu">
+                                <!-- Toggler/collapsibe Button ///    bouton-->
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                                        <span class="navbar-toggler-icon"></span>
+                                </button>
+    
+                                <!-- Links -->
+                                <div class="collapse navbar-collapse monMenu" id="collapsibleNavbar">
+                                    <ul id="conteneurMenu" class="navbar-nav ulMenuBandeau">
+                                        <li class="nav-item ml-2 mr-2">
+                                            <a class="nav-link text-light" href="index.html">Accueil</a>            
+                                        </li>
+                                        <li class="nav-item ml-2 mr-2">
+                                            <a class="nav-link text-light" href="notreMarque.html">Notre marque</a>
+                                        </li><!-----------------<--menu déroulant-->
+                                        <li class="nav-item ml-2 mr-2 dropdown">
+                                            <a class="nav-link text-light dropdown-toggle" href="nosProduits.html" id="navbardrop" data-toggle="dropdown">
+                                                Nos produits
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="nosProduits.html#LesPates">
+                                                Les pâtes
+                                                </a>
+                                                <a class="dropdown-item" href="nosProduits.html#LesFruits">
+                                                Les fruits exotiques
+                                                </a>
+                                                <a class="dropdown-item" href="nosProduits.html#LesEpices">
+                                                Les épices
+                                                </a>
+                                                <a class="dropdown-item" href="nosProduits.html#LesLegumes">
+                                                    Les Légumes
+                                                </a>
+                                            </div>
+                                        </li> <!--fin du menu déroulant-->
+                                        <li class="nav-item ml-2 mr-2">
+                                            <a class="nav-link text-light" href="nosFormations.html">Nos formations</a>
+                                        </li>
+                                        <li class="nav-item ml-2 mr-2">
+                                            <a class="nav-link text-light" href="contact.html">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>    
+                        <div class="col-12 col-md-3  divBtnConnextion">
+                            <figure id="bloc_connexion" class="connexion text-light">  
+                                <a href="creezVotreCompte.html" class="identification">Créez votre compte</a>
+                                <a href="connecter.html" data-toggle="modal" data-target="#myModalConnecter"  class="identification">Se
+                                    connecter</a>
+                            </figure>
+                            <!-- Bloc déconnexion - s'affiche en mode connecté -->
+                            <figure id="bloc_deconnexion" class="deconnexion text-light">
+                                <p>
+                                    Bonjour Lemoine Gwénola
+                                </p>
+                                <img id="boutonPanier" class="imgPanier" src="public/images/images/panier.png" alt="Mon panier" title="Mon panier">
+                                <a href="index.html" class="fermer" id="btnSeDeconnecter" >Se déconnecter</a>
+                            </figure>
+                        </div>
+                    </div>        
+                </div>
+            </div>
+        </header>
+        <div id="laPage">  
+            <main id="nosProduits">
+                    <!--ancre pour produits pâtes / anchor for pasta products-->
+                <section id="LesPates" class="ProduitsEnVente">
+                    <h1>
+                        Les pâtes
+                    </h1>
+                    <article class="pates">
+                        <img src="public/images/images/pate-artisanale-pennhelous.jpg" alt="pâtes Pennhélous" title="pâtes Pennhélous">
+                        <h2>
+                            Pâtes artisanales Pennhélous... 
+                        </h2>
+                        <p>
+                            3.95€
+                        </p> 
+                        <p class="rupture">
+                            rupture de stock
+                        </p>
+                        <input class="acheter" type="button" value="Ajouter">
+                    </article>
+                    <article class="pates">
+                            <img src="public/images/images/pate-artisanale-denthelous.jpg" alt="Pâtes denthelous" title="Pâtes denthelous">
+                            <h2>
+                                    Pâtes artisanales produit de la... 
+                            </h2>
+                            <p>
+                                3.95€
+                            </p> 
+                            <p class="stock">
+                                En stock
+                            </p>
+                            <input class="acheter" type="button" value="Ajouter">
+                    </article>
+                    <article class="pates">
+                            <img src="public/images/images/pates-artisanales-cauquilhous.jpg" alt="pâtes cauquilhous" title="pâtes cauquilhous">
+                            <h2>
+                                    Pâtes Bio artisanales au blé dur... 
+                            </h2>
+                            <p>
+                                3.95€
+                            </p> 
+                            <p class="stock">
+                                En stock
+                            </p>
+                            <input class="acheter" type="button" value="Ajouter">
+                    </article>
+                    <article class="pates">
+                            <img src="public/images/images/pates-artisanales-bio.jpg" alt="Pâtes bio" title="Pâtes bio" >
+                            <h2>
+                                    Pâtes Artisanales Bio, Hélices... 
+                            </h2>
+                            <p>
+                                3.95€
+                            </p> 
+                            <p class="stock">
+                                En stock
+                            </p>
+                            <input class="acheter" type="button" value="Ajouter">
+                    </article>
+                    <article class="pates">
+                            <img src="public/images/images/pates-artisanales-tarnaise.jpg" alt="Pâtes tarnaise" title="Pâtes tarnaise">
+                            <h2>
+                                    Pâtes Ba Pla la pâte artisanale... 
+                            </h2>
+                            <p>
+                                3.95€
+                            </p> 
+                            <p class="stock">
+                                En stock
+                            </p>
+                            <input class="acheter" type="button" value="Ajouter">
+                    </article>
+                    <article class="pates">
+                            <img src="public/images/images/pates-bio-artisanales.jpg" alt="Pâtes au blé dur" title="Pâtes au blé dur">
+                            <h2>
+                                    Pâtes Bio artisanales au blé dur... 
+                            </h2>
+                            <p>
+                                3.95€
+                            </p> 
+                            <p class="stock">
+                                En stock
+                            </p>
+                            <input class="acheter" type="button" value="Ajouter">
+                        </article>
+                </section>
+                            <!--ancre pour produits exotique / anchor for exotic products-->
+                <section id="LesFruits" class="ProduitsEnVente">
+                    <h1>
+                        Les fruits exotiques
+                    </h1>
+                    <article class="pates">
+                        <img src="public/images/images/cassis.jpg" alt="cassis" title="cassis">
+                        <h2>
+                            Cassis
+                        </h2>
+                        <p>
+                            3.95€
+                        </p> 
+                        <p class="rupture">
+                            rupture de stock
+                        </p>
+                        <input class="acheter" type="button" value="Ajouter">
+                    </article>
+                    <article class="pates">
+                            <img src="public/images/images/goyave.jpg" alt="goyave" title="goyave">
+                            <h2>
+                                goyave
+                            </h2>
+                            <p>
+                                3.95€
+                            </p> 
+                            <p class="stock">
+                                En stock
+                            </p>
+                            <input class="acheter" type="button" value="Ajouter">
+                    </article>
+                    <article class="pates">
+                            <img src="public/images/images/carambole.jpg" alt="goyave" title="goyave">
+                            <h2>
+                                carambole
+                            </h2>
+                            <p>
+                                3.95€
+                            </p> 
+                            <p class="stock">
+                                En stock
+                            </p>
+                            <input class="acheter" type="button" value="Ajouter">
+                    </article>
+                    <article class="pates">
+                            <img src="public/images/images/fleur-hibiscus.jpg" alt="fleur-hibiscus" title="fleur-hibiscus">
+                            <h2>
+                                fleur-hibiscus
+                            </h2>
+                            <p>
+                                3.95€
+                            </p> 
+                            <p class="stock">
+                                En stock
+                            </p>
+                            <input class="acheter" type="button" value="Ajouter">
+                    </article>
+                    <article class="pates">
+                            <img src="public/images/images/kaki.jpg" alt="kaki" title="kaki">
+                            <h2>
+                                kaki
+                            </h2>
+                            <p>
+                                3.95€
+                            </p> 
+                            <p class="stock">
+                                En stock
+                            </p>
+                            <input class="acheter" type="button" value="Ajouter">
+                    </article>
+                    <article class="pates">
+                            <img src="public/images/images/litchi.jpg" alt="litchi" title="litchi">
+                            <h2>
+                                litchi
+                            </h2>
+                            <p>
+                                3.95€
+                            </p> 
+                            <p class="stock">
+                                En stock
+                            </p>
+                            <input class="acheter" type="button" value="Ajouter">
+                    </article>
+                </section>
+                        <!--ancre pour produits epices / anchor for spices-->
+                <section id="LesEpices" class="ProduitsEnVente">
+                    <h1>
+                        Les épices
+                    </h1>
+                    <article class="pates">
+                        <img src="public/images/images/mangue.jpg" alt="mangue" title="mangue">
+                        <h2>
+                            mangue
+                        </h2>
+                        <p>
+                            2.80€
+                        </p> 
+                        <p class="rupture">
+                            rupture de stock
+                        </p>
+                        <input class="acheter" type="button" value="Ajouter">
+                    </article>
+                    <article class="pates">
+                            <img src="public/images/images/gingembre-confit.jpg" alt="gingembre-confit" title="gingembre-confit">
+                            <h2>
+                                gingembre-confit
+                            </h2>
+                            <p>
+                                2.30€
+                            </p> 
+                            <p class="stock">
+                                En stock
+                            </p>
+                            <input class="acheter" type="button" value="Ajouter">
+                    </article>
+                    <article class="pates">
+                            <img src="public/images/images/melange-libanais.jpg" alt="melange-libanais" title="melange-libanais">
+                            <h2>
+                                Mélange libanais
+                            </h2>
+                            <p>
+                                1.95€
+                            </p> 
+                            <p class="stock">
+                                En stock
+                            </p>
+                            <input class="acheter" type="button" value="Ajouter">
+                    </article>
+                    <article class="pates">
+                            <img src="public/images/images/ail-noir.jpg" alt="ail-noir" title="ail-noir" >
+                            <h2>
+                                ail noir
+                            </h2>
+                            <p>
+                                1.80€
+                            </p> 
+                            <p class="stock">
+                                En stock
+                            </p>
+                            <input class="acheter" type="button" value="Ajouter">
+                    </article>
+                    <article class="pates">
+                            <img src="public/images/images/badiane-anis-etoile.jpg" alt="badiane-anis-etoile" title="badiane-anis-etoile">
+                            <h2>
+                                Badiane-anis-etoile 
+                            </h2>
+                            <p>
+                                1.70€
+                            </p> 
+                            <p class="stock">
+                                En stock
+                            </p>
+                            <input class="acheter" type="button" value="Ajouter">
+                    </article>
+                    <article class="pates">
+                            <img src="public/images/images/citronnelle-moulue.jpg" alt="citronnelle-moulue" title="citronnelle-moulue">
+                            <h2>
+                                    Citronnelle moulue
+                            </h2>
+                            <p>
+                                1.95€
+                            </p> 
+                            <p class="stock">
+                                En stock
+                            </p>
+                            <input class="acheter" type="button" value="Ajouter">
+                        </article>
+                </section>
+                            <!--ancre pour produits Legumes / anchor for vegetable products-->
+                <section id="LesLegumes" class="ProduitsEnVente">
+                    <h1>
+                        Les légumes
+                    </h1>
+                    <article class="pates">
+                        <img src="public/images/images/poireaux.png" alt="poireaux" title="poireaux">
+                        <h2>
+                            Poireaux
+                        </h2>
+                        <p>
+                            3.95€
+                        </p> 
+                        <p class="rupture">
+                            rupture de stock
+                        </p>
+                        <input class="acheter" type="button" value="Ajouter">
+                    </article>
+                    <article class="pates">
+                            <img src="public/images/images/carottes-de-couleur.jpg" alt="carottes-de-couleur" title="carottes-de-couleur">
+                            <h2>
+                                Carottes de couleur
+                            </h2>
+                            <p>
+                                2.95€
+                            </p> 
+                            <p class="stock">
+                                En stock
+                            </p>
+                            <input class="acheter" type="button" value="Ajouter">
+                    </article>
+                    <article class="pates">
+                            <img src="public/images/images/potiron.png" alt="potimarron" title="potimarron">
+                            <h2>
+                                potimarron
+                            </h2>
+                            <p>
+                                4.95€
+                            </p> 
+                            <p class="stock">
+                                En stock
+                            </p>
+                            <input class="acheter" type="button" value="Ajouter">
+                    </article>
+                    <article class="pates">
+                            <img src="public/images/images/panais.jpg" alt="panais" title="panais" >
+                            <h2>
+                                    panais
+                            </h2>
+                            <p>
+                                2.35€
+                            </p> 
+                            <p class="stock">
+                                En stock
+                            </p>
+                            <input class="acheter" type="button" value="Ajouter">
+                    </article>
+                    <article class="pates">
+                            <img src="public/images/images/echalote.jpg" alt="echalotes" title="echalotes">
+                            <h2>
+                                echalotes
+                            </h2>
+                            <p>
+                                2.45€
+                            </p> 
+                            <p class="stock">
+                                En stock
+                            </p>
+                            <input class="acheter" type="button" value="Ajouter">
+                    </article>
+                    <article class="pates">
+                            <img src="public/images/images/endive.jpg" alt="endives" title="endives">
+                            <h2>
+                                    endives
+                            </h2>
+                            <p>
+                                2.15€
+                            </p> 
+                            <p class="stock">
+                                En stock
+                            </p>
+                            <input class="acheter" type="button" value="Ajouter">
+                        </article>
+                </section>
+            </main>
+            <footer id="MentionFooter">
+                    <!-- Menu du footer -->
+                    <div class="reseaux">
+                        <!-- Réseaux sociaux -->
+                        <ul class="ulReseau">
+                            <!-- target="_blank" => ouvre dans un nouvel onglet--> 
+                            <li><a href="https://www.facebook.com/" target="_blank"><img src="public/images/reseaux/facebook.png" alt="facebook" title="facebook"></a></li>
+                            <li><a href="https://www.instagram.com/" target="_blank"><img src="public/images/reseaux/instagram.png" alt="Instagram" title="Instagram"></a></li>
+                            <li><a href="https://twitter.com/accueil?lang=fr" target="_blank"><img src="public/images/reseaux/twitter.png" alt="twitter" title="twitter"> </a></li>
+                        </ul>
+                    </div>
+                    <div class="menuFooter">
+                        <nav>
+                            <ul>
+                                <li><a href="#">Evènements</a></li>
+                                <li><a href="#">Le nouveau bio</a></li>
+                                <li><a href="#">Notre formateur</a></li>
+                                <li><a href="#">Blog</a></li>
+                            </ul>
+                        </nav>
+                        <!-- Mentions légales --> 
+                        <p class="mention">
+                            <a href="mentionsLegales.html">Mentions Legales </a>
+                            <a href="ConditionsGénérales.html">Conditions générales</a>
+                            <a href="RGPD.html">RGPD</a>
+                            <a href="planDuSite.html">Plan du site</a>    
+                        </p>
+                    </div>
+                    <div class="copyright">    
+                        <p>
+                            &copy; Les fins Gourmets 2019 / Développeur web: Lemoine Gwénola
+                        </p>
+                    </div>
+                </div><!--fin de #page-->
+            </footer>
+        
+
+        <!--<script type="text/javascript" src="public/js/optimiser.js" defer></script>-->
+        <script type="text/javascript" src="public/js/header.js"></script>
+
+        <!--class active-->
+        <script type= "text/javascript">
+            menuActive(2);
+        </script>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+        </script> 
+    </body>
+</html>

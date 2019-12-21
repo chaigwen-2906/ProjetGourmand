@@ -1,0 +1,271 @@
+
+a 
+{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+
+.RetourHautPage
+{
+    position: fixed;
+    bottom:50px;
+    right: 10px;
+}
+
+.imgRetourHautPage
+{
+    width: 45px;
+    cursor: pointer;
+}
+header
+{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+/* Bloc page  / Block page*/
+#laPage
+{
+    background-color: rgb(139, 157, 165);
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding-top: 15px;
+}
+
+header .divTaille
+{
+    max-width: 1500px;
+    width: 100%;
+    background-color: rgb(112, 17, 31);
+    margin-top: 10px;
+}
+header .divMenu
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .divBtnConnextion
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+header #top img
+{
+    max-width: 150px;
+}
+
+header .identification
+{
+    color: grey;
+}
+header .fermer
+{
+    color: grey;
+}
+header .connexion
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+header .divBtnConnextion .imgPanier
+{
+    margin-right: 10px;
+    cursor: pointer;
+}
+header .navbar
+{
+    display: flex;
+    justify-content: flex-end;
+    background-color: grey;
+}
+
+/*-------------media querie mobile----------------*/
+@media screen and (max-width:576px)
+{
+    header #top
+    {
+        max-width: 100%;
+        justify-content: center;
+        display: flex;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    header .btnMenu
+    {
+        justify-content: center;
+    }
+
+    header .monMenu
+    {
+        text-align: center;
+    }
+    header .navbar-nav
+    {
+        margin-top: 10px;
+    }
+    header .divMenu
+     {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+    header .divBtnConnextion
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0px;
+    }
+}
+
+
+
+
+/*---------------media querie tablette------------*/
+@media screen and (max-width: 992px)
+{
+    header #top
+    {
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    header .btnMenu
+    {
+        justify-content: center;
+    }
+
+    header .monMenu
+    {
+        text-align: center;
+    }
+    header .divMenu
+     {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+    header .divBtnConnextion
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+}
+
+/*-------------media querie mobile----------------*/
+@media screen and (max-width:1150px)
+{
+    header .ulMenuBandeau
+    {
+        flex-direction: column !important; 
+    } 
+}
+
+
+/*Barre de cookies*/
+#cookies
+{
+    position: fixed;
+    top:0px;
+    width: 100%;
+    text-align: center;
+    background-color:#cfcfcf;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    z-index: 1;
+} 
+#cookies .accepter
+{
+    margin: 0 15px;
+    border: 1px solid #f39331;
+    background-color: #ffffff;
+    color: #f39331;
+    border-radius: 2px;
+    padding: 3px;
+    cursor: pointer;
+}
+#cookies .savoirPlus
+{
+    margin: 0 15px;
+    border: 1px solid #f39331;
+    background-color: #ffffff;
+    color: #f39331;
+    border-radius: 2px;
+    padding: 3px;
+    width: 150px;
+    
+}
+#cookies .accepter:hover
+{
+    background-color:#f39331;
+    color: white;
+}
+#cookies .savoirPlus:hover
+{
+    background-color:#f39331;
+    color: white;
+}
+
+
+
+
+/*------------------Class Active-------------------------------------*/
+.active, .nav-link:hover {
+    background-color: #666;
+    color: gray;
+    border: 1px dotted white;
+  }
+/*----------------------fin de la class Active--------------------*/
+
+
+
+/* ---------------------modal dialog connecter---------------------*/
+#myModalConnecter .modal-header {
+    margin: 0 auto;
+}
+#myModalConnecter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#myModalConnecter figure {
+    width: 80%;
+    margin: auto;
+        margin-top: auto;
+    margin-top: 10px;
+}
+#myModalConnecter .bntAligne {
+    display: inline-block;
+    width: 131px;
+    vertical-align: top;
+}
+#myModalConnecter label {
+    width: 40%;
+    min-width: 150px;
+    float: left;
+    text-align: left;
+}
+#myModalConnecter form a {
+    margin-top: 15px;
+}
+#myModalConnecter form #modal_get {
+    margin-top: 20px;
+    width: 150px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    margin-bottom: 15px;
+}
