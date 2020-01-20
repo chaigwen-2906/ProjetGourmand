@@ -1,86 +1,23 @@
-/*------------------nos produits-----------------*/
-#nosProduits .ProduitsEnVente
+#produits .h2border
 {
-    max-width: 1170px;
-    margin:0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+     color:rgb(112, 17, 31);
+     background-color: rgb(170,155,155);
 }
-.pates
+#produits .card-title
 {
-    border: 2px solid white;
-    width: 25%;
-    min-width: 210px;
-    text-align: center;
-    margin: 10px;
-    padding: 10px;
-
+     color:rgb(112, 17, 31) ; 
 }
-#nosProduits .ProduitsEnVente h1
+#produits .Rupture
 {
-    width: 100%;
-    text-align: center;
-    padding: 25px;
-   
+     color: red;
 }
-#nosProduits .pates img
+#produits .stock
 {
-    width: 150px;
-} 
-#nosProduits .pates h2
-{
-    font-size: 0.8rem;
-    color:rgb(112, 17, 31);
-}
-.rupture 
-{
-    color: rgb(179, 8, 8);
-}
-.stock
-{
-    color:green;
-}
-.ProduitsEnVente
-{
-    background-color: gray;
-    margin: 15px;
-}
-.ProduitsEnVente h1
-{
-    background-color: rgb(170, 155, 155);
-}
-#nosProduits
-{
-    margin: 15px;
+     color: green;
 }
 
-
-
-
-/*---------------media querie tablette------------*/
-@media screen and (max-width: 992px)
+#produits .card-title
 {
-    #nosProduits .pates img
-    {
-        width: 100px;
-    }
-
-
-
-
-
-    #nosProduits .pates img
-    {
-        width: 100px;
-    }
-
+     height: 50px;
 }
-/*-------------media querie mobile----------------*/
-@media screen and (max-width:576px)
-{
-    #nosProduits .pates img
-    {
-        width: 70px;
-    }
-}
+

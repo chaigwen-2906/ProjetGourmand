@@ -1,298 +1,386 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="keywords" content="épicerie">
-        <meta name="description" content="Les fins gourmets, tout sur nos produits et nos recettes">
-        <meta name="title" content="épicerie, vente libre">
 
-        <title>Les fins gourmets - Accueil</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="épicerie">
+    <meta name="description" content="Les fins gourmets, tout sur nos produits et nos recettes">
+    <meta name="title" content="épicerie, vente libre">
+    <meta http-equiv="expires" content="43200" />
 
-        <!-- Appel des feuilles de style --/ Calling style sheets-->
-        <!--<link rel="stylesheet" href="public/css/header.css">
-        <link rel="stylesheet" href="public/css/footer.css">
-        <link rel="stylesheet" href="public/css/index.css">-->         
-        <link rel="stylesheet" href="public/css/styles.css"  type="text/css" media="screen" >
-        
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    <title>Les fins gourmets - Accueil</title>
+
+    <!-- Appel des feuilles de style --/ Calling style sheets-->
+
+    <link rel="stylesheet" href="public/css/header.css">
+    <link rel="stylesheet" href="public/css/index.css">
+    <link rel="icon" href="public/images/logos/favicon.ico" />
+    <!--<link rel="stylesheet" href="public/css/styles.css"  type="text/css" media="screen"-->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-        <!--appel à fonttawesome-->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
-        
-    </head>
-    <body>
-        <div id="cookies">
-            <span>
-                <!-- balise b : mets en gras -->
-                <b>En continuant de défiler</b>, vous acceptez l'utilisation de services tiers pouvant installer des cookies
-            </span>
-            <a id="BtnCookieAccepter" class="accepter"> ✓ Ok, tout accepter</a>
-            <a class="savoirPlus" href="https://www.cnil.fr/fr/site-web-cookies-et-autres-traceurs" target="_blank">En savoir plus</a>
-        </div>
-        <a id="retourHaut" class="RetourHautPage"><img class="imgRetourHautPage" src="public/images/images/fleche_haut.png"></a>
-        <!--boite Modal-->
-        <div id="myModalConnecter" class="modal fade" role="dialog">
-            <div class="modal-dialog"> 
-                <!-- Modal content---------->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title"> Connectez-vous à votre compte</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                     <div class="modal-body">
-                        <form>
-                            <figure>
-                                <label class="bntAligne" for="email"> E-mail </label>
-                                <input type="email" name="email" id="mail_modal"required ><br />
-                                <span id="errorMailConnecte"></span>
-                            </figure>
-                            <figure>
-                                <label class="bntAligne" for="motDePasse"> Mot de passe </label>
-                                <input type="password" name="motDePasse" id="motDePasse"required ><br />
-                                <span id="errorMotDePasse"></span>
-                            </figure>
-                            <a href="#">Mot de passe oublié ? </a>
-                            <input class="boutonConnexion" id="modal_get" type="submit" value="Se connecter">
-                        </form>
-                    </div>
+    <!--appel à fonttawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+
+</head>
+
+<body>
+    <div id="cookies">
+        <span>
+            <!-- balise b : mets en gras -->
+            <b>En continuant de défiler</b>, vous acceptez l'utilisation de services tiers pouvant installer des cookies
+        </span>
+        <a id="BtnCookieAccepter" class="accepter"> ✓ Ok, tout accepter</a>
+        <a class="savoirPlus" href="https://www.cnil.fr/fr/site-web-cookies-et-autres-traceurs" target="_blank">En
+            savoir plus</a>
+    </div>
+    <a id="retourHaut" class="RetourHautPage"><img class="imgRetourHautPage"
+            src="public/images/images/fleche_haut.png">
+        </a>
+    <!--boite Modal-->
+    <div id="myModalConnecter" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content---------->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"> Connectez-vous à votre compte</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <figure>
+                            <label class="bntAligne" for="email"> E-mail </label>
+                            <input type="email" name="email" id="mailConnecte" required><br />
+                            <span id="errorMailConnecte"></span>
+                        </figure>
+                        <figure>
+                            <label class="bntAligne" for="motDePasse"> Mot de passe </label>
+                            <input type="password" name="motDePasse" id="passConnecte" required><br />
+                            <span id="errorPassConnecte"></span>
+                        </figure>
+                        <a href="#">Mot de passe oublié ? </a>
+                        <input class="boutonConnexion" id="modal_get" type="submit" value="Se connecter">
+                    </form>
                 </div>
             </div>
-        </div> 
-        <header class="container-fluid">
-            <div class="container divTaille" >
-                <div class="row">
-                    <div class="col-12 col-md-2 " id="top">
-                        <img class="img-fluid" src="public/images/logos/les-fins-gourmets.png" alt="logo" >  
-                    </div>         
-                    <div class="col-12 col-md-7 divMenu">
-                        <nav class="navbar navbar-expand-md bg-dark grey  navbar-dark btnMenu">
-                            <!-- Toggler/collapsibe Button ///    bouton-->
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                                    <span class="navbar-toggler-icon"></span>
-                            </button>
+        </div>
+    </div>
+    <header class="container-fluid">
+        <div class="container-lg">
+            <div class="row d-flex">
+                <div class="col-lg-2 col-md-5 col-sm-4 colonneBandeau1">
+                    <img class="img-fluid" style="max-width: 120px;" src="public/images/logos/les-fins-gourmets.png"
+                        alt="logo">
+                </div>
+                <div class="col-lg-7 col-md-2 col-sm-2 colonneBandeau2 d-flex justify-content-center align-items-center">
+                    <nav class="d-flex justify-content-center bg-dark navbar-dark navbar navbar-expand-lg">
+                        <!-- Toggler/collapsibe Button ///    bouton-->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#collapsibleNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
 
-                            <!-- Links -->
-                            <div class="collapse navbar-collapse monMenu" id="collapsibleNavbar">
-                                <ul id="conteneurMenu" class="navbar-nav ulMenuBandeau">
-                                    <li class="nav-item ml-2 mr-2">
-                                        <a class="nav-link text-light" href="index.html">Accueil</a>            
-                                    </li>
-                                    <li class="nav-item ml-2 mr-2">
-                                        <a class="nav-link text-light" href="notreMarque.html">Notre marque</a>
-                                    </li><!-----------------<--menu déroulant-->
-                                    <li class="nav-item ml-2 mr-2 dropdown">
-                                        <a class="nav-link text-light dropdown-toggle" href="nosProduits.html" id="navbardrop" data-toggle="dropdown">
-                                            Nos produits
-                                        </a>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="nosProduits.html#LesPates">
+                        <!-- Links -->
+                        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                            <ul id="conteneurMenu" class="navbar-nav ulMenuBandeau">
+                                <li class="nav-item ml-2 mr-2">
+                                    <a class="nav-link text-light" href="index.html">Accueil</a>
+                                </li>
+                                <li class="nav-item ml-2 mr-2">
+                                    <a class="nav-link text-light" href="notreMarque.html">Notre marque</a>
+                                </li>
+                                <!-----------------<--menu déroulant-->
+                                <li class="nav-item dropdown ml-2 mr-2">
+                                    <a class="nav-link text-light dropdown-toggle" href="nosProduits.html"
+                                        id="navbardrop" data-toggle="dropdown">
+                                        Nos produits
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="nosProduits.html#LesPates">
                                             Les pâtes
-                                            </a>
-                                            <a class="dropdown-item" href="nosProduits.html#LesFruits">
+                                        </a>
+                                        <a class="dropdown-item" href="nosProduits.html#LesFruits">
                                             Les fruits exotiques
-                                            </a>
-                                            <a class="dropdown-item" href="nosProduits.html#LesEpices">
+                                        </a>
+                                        <a class="dropdown-item" href="nosProduits.html#LesEpices">
                                             Les épices
-                                            </a>
-                                            <a class="dropdown-item" href="nosProduits.html#LesLegumes">
-                                                Les Légumes
-                                            </a>
-                                        </div>
-                                    </li> <!--fin du menu déroulant-->
-                                    <li class="nav-item ml-2 mr-2">
-                                        <a class="nav-link text-light" href="nosFormations.html">Nos formations</a>
-                                    </li>
-                                    <li class="nav-item ml-2 mr-2">
-                                        <a class="nav-link text-light" href="contact.html">Contact</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>    
-                    <div class="col-12 col-md-3  divBtnConnextion">
-                        <figure id="bloc_connexion" class="connexion text-light">  
-                            <a href="creezVotreCompte.html" class="identification">Créez votre compte</a>
-                            <a href="connecter.html" data-toggle="modal" data-target="#myModalConnecter"  class="identification">Se
-                                connecter</a>
-                        </figure>
-                        <!-- Bloc déconnexion - s'affiche en mode connecté -->
-                        <figure id="bloc_deconnexion" class="deconnexion text-light">
-                            <p>
-                                Bonjour Lemoine Gwénola
-                            </p>
-                            <img id="boutonPanier" class="imgPanier" src="public/images/images/panier.png" alt="Mon panier" title="Mon panier">
-                            <a href="index.html" class="fermer" id="btnSeDeconnecter" >Se déconnecter</a>
-                        </figure>
-                    </div>
-                </div>        
+                                        </a>
+                                        <a class="dropdown-item" href="nosProduits.html#LesLegumes">
+                                            Les Légumes
+                                        </a>
+                                    </div>
+                                </li>
+                                <!--fin du menu déroulant-->
+                                <li class="nav-item ml-2 mr-2">
+                                    <a class="nav-link text-light" href="nosFormations.html">Nos formations</a>
+                                </li>
+                                <li class="nav-item ml-2 mr-2">
+                                    <a class="nav-link text-light" href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-lg-3 col-md-5 col-sm-5 colonneBandeau3 d-flex align-items-end flex-column">
+                    <figure id="bloc_connexion" class="d-flex flex-column align-items-start">
+                        <a href="creezVotreCompte.html" class="text-secondary">Créez votre compte</a>
+                        <a href="" data-toggle="modal" data-target="#myModalConnecter" class="text-secondary">Se
+                            connecter</a>
+                    </figure>
+                    <!-- Bloc déconnexion - s'affiche en mode connecté -->
+                    <figure id="bloc_deconnexion" class="text-light">
+                        <p>
+                            Bonjour Lemoine Gwénola
+                        </p>
+                        <img id="boutonPanier" class="btn" src="public/images/images/panier.png" alt="Mon panier"
+                            title="Mon panier">
+                        <a href="index.html" class="text-secondary" id="btnSeDeconnecter">Se déconnecter</a>
+                    </figure>
+                </div>
             </div>
         </div>
-        </header>
-        <div id="laPage"> 
-            <main id="accueil">
-                <section class="sectionSlider">
-                    <img id="imgSlider">
-                    <img id="gauche" class="imgGauche" src="public/images/images/flecheGauche.png">
-                    <img id="droite" class="imgDroite" src="public/images/images/flecheDroite.png">
-                </section>
-                <div class="contenuPrincipal">
-                    <section class="presentation">
-                        <h1 class="titre">
-                            Notre boutique en ligne
-                        </h1>
-                        <article class="unArticle">
-                            <a href="nosProduits.html#LesPates">
-                                <figure>
-                                    <img src="public/images/images/pates.jpg">
-                                    <h2 class="TitreArticle">
+    </header>
+
+    <main id="accueil">
+        <div class="container-fluid">
+            <div class="container-lg ">
+                <div id="demo" class="carousel slide pt-2 pb-2" data-ride="carousel">
+                    <!-- Indicators /-----------indicateurs-->
+                    <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+                        <li data-target="#demo" data-slide-to="2"></li>
+                    </ul>
+
+                    <!-- The slideshow /----diaporama-->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="w-100" src="public/images/slider/epicerie-rayons.jpg" alt="Epicerie"
+                                title="epicerie">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100" src="public/images/slider/masala.jpg" alt="Masala" title="Masala">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="w-100" src="public/images/slider/torsades-aux-epices.jpg"
+                                alt="Torsades aux épices" title="Torsades aux épices">
+                        </div>
+                    </div>
+                    <!-- Left and right controls/-----commande gauche et droite -->
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row ">
+                    <section class="col-xl-8 col-lg-8 col-md-12 col-sm-12 mt-2">
+                        <div class="row mr-2 border border-secondary rounded">
+                            <h1
+                                class="col-xl-12 col-12 col-lg-12 col-md-12 col-sm-12 text-center mt-3 text-uppercase titreAccueil">
+                                Notre boutique ligne
+                            </h1>
+                            <article class="col-xl-6 col-lg-6 col-md-6 col-sm-12 imgboutique text-center pt-2 pb-3">
+                                <a href="nosProduits.html#LesPates">
+                                    <figure>
+                                        <img class="w-100" src="public/images/images/pates.jpg">
+                                        <h2 class="TitreArticle w-75 position-absolute font-weight-bold">
                                             Pâtes
-                                    </h2>
-                                </figure>
-                            </a>
-                        </article>
-                        <article class="unArticle">
-                            <a href="nosProduits.html#LesFruits">
-                                <figure>
-                                    <img src="public/images/images/fruits.jpg">
-                                    <h2 class="TitreArticle">
-                                        Les fruits exotiques
-                                    </h2>
-                                </figure>
-                            </a>
-                        </article>
-                        <article class="unArticle">
-                            <a href="nosProduits.html#LesEpices">
-                                <figure>
-                                    <img src="public/images/images/epices.jpg">
-                                    <h2 class="TitreArticle">
-                                        Les épices
-                                    </h2>
-                                </figure>
-                            </a>
-                        </article>
-                        <article class="unArticle">
-                            <a href="nosProduits.html#LesLegumes">
-                                <figure>
-                                    <img src="public/images/images/asperges.jpg">
-                                    <h2 class="TitreArticle">
-                                        Les légumes
-                                    </h2>
-                                </figure>
-                            </a>
-                        </article>
+                                        </h2>
+                                    </figure>
+                                </a>
+                            </article>
+                            <article class="col-xl-6 col-lg-6 col-md-6 col-sm-12 imgboutique text-center pt-2 pb-3">
+                                <a href="nosProduits.html#LesFruits">
+                                    <figure>
+                                        <img class="w-100" src="public/images/images/fruits.jpg">
+                                        <h2 class="TitreArticle w-75 position-absolute font-weight-bold">
+                                            Fruits exotiques
+                                        </h2>
+                                    </figure>
+                                    <!--</a>-->
+                            </article>
+                            <article class="col-xl-6 col-lg-6 col-md-6 col-sm-12 imgboutique  text-center pt-2 pb-3">
+                                <a href="nosProduits.html#LesEpices">
+                                    <figure>
+                                        <img class="w-100" src="public/images/images/epices.jpg">
+                                        <h2 class="TitreArticle w-75 position-absolute font-weight-bold">
+                                            Epices
+                                        </h2>
+                                    </figure>
+                                </a>
+                            </article>
+                            <article class="col-xl-6 col-lg-6 col-md-6 col-sm-12 imgboutique text-center pt-2 pb-3 ">
+                                <a href="nosProduits.html#LesLegumes">
+                                    <figure>
+                                        <img class="w-100" src="public/images/images/asperges.jpg">
+                                        <h2 class="TitreArticle w-75 position-absolute font-weight-bold">
+                                            Légumes
+                                        </h2>
+                                    </figure>
+                                </a>
+                            </article>
+                        </div>
                     </section>
-                    <aside class="propos">
-                        <article>
-                            <h3>
-                                Notre Formateur
-                            </h3>
-                            <img class="imagesFormateur" src="public/images/images/formateur.jpg">
-                                <p>
-                                    Bonjour, je suis votre formateur<br>
-                                    Je vais pouvoir vous apprendre<br> 
-                                    a faire vos repas de noël  !!<br>
-                                    Venez découvrire nos produits
+                    <aside class="col-xl-4 col-lg-4 col-md-12 col-sm-12 mt-2">
+                        <div class="row mr-2 border border-secondary rounded">
+                            <article class="col-12 text-center">
+                                <h3 class="descriptionFormateur pt-3">
+                                    Notre Formateur
+                                </h3>
+                                <img class="imagesFormateur w-75 pt-2 pb-2" src="public/images/images/formateur.jpg">
+                                <p class="paraFormateur text-justify">
+                                    Bonjour, je suis votre formateur
+                                    Je vais pouvoir vous apprendre
+                                    a faire vos repas de noël !!
+                                    Venez découvrire nos produits.
                                 </p>
-                        </article>
-                        <article>
-                            <h3>
-                                Prochain Atelier
-                            </h3>
-                            <p>
-                                1.Crêpe à la noix de Saint-Jacques<br>
-                                flambée au whisky. <br>
-                                2.Steak de kangourou aux légumes.<br>
-                                3.Carpaccio d'oranges et de pommes.
-                            </p>
-                        </article>
+                            </article>
+                            <article class="col-12 text-left">
+                                <h3 class="h3Formateur text-center">
+                                    Prochain Atelier
+                                </h3>
+                                <ol>
+                                    <li>
+                                        Crêpe à la noix de Saint-Jacques flambée au whisky.
+                                    </li>
+                                    <li>
+                                        Steak de kangourou aux légumes.
+                                    </li>
+                                    <li>
+                                        Carpaccio d'oranges et de pommes.
+                                    </li>
+                                </ol>
+                            </article>
+                        </div>
                     </aside>
                 </div>
-                <section class="videos">
-                    <h3>
+            </div>
+        </div>
+        <div class="container-fluid bg-secondary mt-2">
+            <div class="container">
+                <div class="row ">
+                    <h3 class=" col-12 text-center mt-3 mb-3">
                         Nos videos
                     </h3>
-                    <figure class="videoTek">
-                        <video controls>
+                </div>
+                <figure class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 mb-3 text-center ">
+                        <h6 class="">Cours de cuisine avec un chef!</h6>
+                        <video controls class="w-100">
                             <source src="public/videos/video1.mp4" type="video/mp4">
                             <p>Votre navigateur ne prend pas en charge les vidéos HTML5.</p>
                         </video>
-                        <video controls>
+                    </div>
+                    <div class="6 col-lg-3 col-md-6 col-sm-6 col-xs-12 mb-3 text-center">
+                        <h6 class="">Apprendre a éplucher les légumes!</h6>
+                        <video controls class="w-100">
                             <source src="public/videos/video2.mp4" type="video/mp4">
                             <p>Votre navigateur ne prend pas en charge les vidéos HTML5.</p>
                         </video>
-                        <video controls>
+                    </div>
+                    <div class="6 col-lg-3 col-md-6 col-sm-6 col-xs-12 mb-3 text-center">
+                        <h6 class="">Envie de passer votre CAP</h6>
+                        <video controls class="w-100">
                             <source src="public/videos/Passer son CAP cuisine.mp4" type="video/mp4">
                             <p>Votre navigateur ne prend pas en charge les vidéos HTML5.</p>
                         </video>
-                        <video controls>
-                            <source src="public/videos/video4.mp4" type="video/mp4">
-                            <p>Votre navigateur ne prend pas en charge les vidéos HTML5.</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 mb-3 text-center">
+                        <h6 class="">Apprendre à ciseler les légumes</h6>
+                        <video controls class="w-100">
+                        <source src="public/videos/video4.mp4" type="video/mp4">
+                        <p>Votre navigateur ne prend pas en charge les vidéos HTML5.</p>
                         </video>
-                    </figure>
-                </section>
-            </main>
-            <footer id="MentionFooter">
-                    <!-- Menu du footer -->
-                    <div class="reseaux">
-                        <!-- Réseaux sociaux -->
-                        <ul class="ulReseau">
-                            <!-- target="_blank" => ouvre dans un nouvel onglet--> 
-                            <li><a href="https://www.facebook.com/" target="_blank"><img src="public/images/reseaux/facebook.png" alt="facebook" title="facebook"></a></li>
-                            <li><a href="https://www.instagram.com/" target="_blank"><img src="public/images/reseaux/instagram.png" alt="Instagram" title="Instagram"></a></li>
-                            <li><a href="https://twitter.com/accueil?lang=fr" target="_blank"><img src="public/images/reseaux/twitter.png" alt="twitter" title="twitter"> </a></li>
-                        </ul>
                     </div>
-                    <div class="menuFooter">
-                        <nav>
-                            <ul>
-                                <li><a href="#">Evènements</a></li>
-                                <li><a href="#">Le nouveau bio</a></li>
-                                <li><a href="#">Notre formateur</a></li>
-                                <li><a href="#">Blog</a></li>
-                            </ul>
-                        </nav>
-                        <!-- Mentions légales --> 
-                        <p class="mention">
-                            <a href="mentionsLegales.html">Mentions Legales </a>
-                            <a href="ConditionsGénérales.html">Conditions générales</a>
-                            <a href="RGPD.html">RGPD</a>
-                            <a href="planDuSite.html">Plan du site</a>    
-                        </p>
-                    </div>
-                    <div class="copyright">    
-                        <p>
-                            &copy; Les fins Gourmets 2019 / Développeur web: Lemoine Gwénola
-                        </p>
-                    </div>
-            </footer>
-        </div><!--fin de #page--> 
-        
-        <!-- Appel du javascript  / Call of javascript-->  
-        <!--<script type="text/javascript" src="public/js/optimiser.js" defer></script>-->
-        <script type="text/javascript" src="public/js/header.js"></script>
-        <script type="text/javascript" src="public/js/slider.js"></script>
-       
+                </figure>
+            </div>
+        </div>
+    </main>
 
-        <!--class active-->
-        <script type= "text/javascript">
-            menuActive(0);
-        </script>
+    <footer class="container-fluid w-100 bg-rgb-(112, 17, 31) mt-3">
+        <div class="container">
+            <!-- Réseaux sociaux -->
+            <ul class="row pt-3 text-center list-unstyled">
+                <!-- target="_blank" => ouvre dans un nouvel onglet-->
+                <li class="col-4"><a href="https://www.facebook.com/" target="_blank"><img
+                            src="public/images/reseaux/facebook.png" alt="facebook" title="facebook"></a></li>
+                <li class="col-4"><a href="https://www.instagram.com/" target="_blank"><img
+                            src="public/images/reseaux/instagram.png" alt="Instagram" title="Instagram"></a></li>
+                <li class="col-4"><a href="https://twitter.com/accueil?lang=fr" target="_blank"><img
+                            src="public/images/reseaux/twitter.png" alt="twitter" title="twitter"> </a></li>
+            </ul>
+            <div class="row">
+                <nav class="col-6 border-left border-secondary">
+                    <ul class="text-left list-unstyled">
+                        <li><a class="text-secondary" href="#">Evènements</a></li>
+                        <li><a class="text-secondary" href="#">Le nouveau bio</a></li>
+                    </ul>
+                </nav>
+                <nav class="col-6 border-right border-secondary">
+                    <ul class="text-right list-unstyled ">
+                        <li><a class="text-secondary" href="#">Notre formateur</a></li>
+                        <li><a class="text-secondary" href="#">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Mentions légales -->
+            <nav class="pt-2 w-100">
+                <ul class="row d-flex justify-content-around w-100 list-unstyled p-0 m-0 text-center">
+                    <li class="col-md-3">
+                        <a class="text-white" href="mentionsLegales.html">Mentions Legales </a>
+                    </li>
+                    <li class="col-md-3">
+                        <a class="text-white" href="ConditionsGénérales.html">Conditions générales</a>
+                    </li>
+                    <li class="col-md-3">
+                        <a class="text-white" href="RGPD.html">RGPD</a>
+                    </li>
+                    <li class="col-md-3">
+                        <a class="text-white" href="planDuSite.html">Plan du site</a>
+                    </li>
+                </ul>
+            </nav>
+            <hr class="separator">
+            <div class="w-100 text-secondary text-center">
+                <p>
+                    &copy; Les fins Gourmets 2019 / Développeur web: Lemoine Gwénola
+                </p>
+            </div>
+        </div>
+    </footer>
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+
+    <!-- Appel du javascript  / Call of javascript-->
+    <!--<script type="text/javascript" src="public/js/optimiser.js" defer></script>-->
+    <script type="text/javascript" src="public/js/header.js"></script>
+
+    <!--class active-->
+    <script type="text/javascript">
+        menuActive(0);
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-        </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-        </script>  
-          
-    </body>
+    </script>
+
+</body>
+
 </html>

@@ -62,18 +62,24 @@ if(sessionStorage.getItem('ConnectOk')){
     {
         //L'utilisateur est connecté
         bloc_deconnexion.style.display = "block";
-        bloc_connexion.style.display = "none";
+
+        bloc_connexion.classList.remove("d-flex");
+        bloc_connexion.classList.add("d-none");
     }
     else{
         //L'utilisateur n'est pas connecté
         bloc_deconnexion.style.display = "none";
-        bloc_connexion.style.display = "flex";
+
+        bloc_connexion.classList.remove("d-none");
+        bloc_connexion.classList.add("d-flex");
     }
 }
 else{
     //L'utilisateur n'est pas connecté
     bloc_deconnexion.style.display = "none";
-    bloc_connexion.style.display = "flex";
+
+    bloc_connexion.classList.remove("d-none");
+    bloc_connexion.classList.add("d-flex");
 }
 
 //on récupére le btn du formulaire
@@ -86,10 +92,10 @@ function validFormSeconnecter(){
 
     //on crée la variable testForm et on lui donne la valeur true
     let testForm = true;
-     //-----------on test le mail-------
-
+    
+    //-----------on test le mail-------
     let errorMailConnecte = document.getElementById("errorMailConnecte");
-    let mailConnecte = document.getElementById("mail_modal");
+    let mailConnecte = document.getElementById("mailConnecte");
     let mailValidConnecte = /^[a-z0-9._-]+@[a-z0-9._-]+com|[a-z0-9._-]+@[a-z0-9._-]+fr$/;
 
     if(mailConnecte.validity.valueMissing){
@@ -107,28 +113,30 @@ function validFormSeconnecter(){
     else{
         
         errorMailConnecte.textContent = "";
+        testForm = true;
     }
-        //---------------on teste le password-------------
+    
+    
+    //---------------on teste le password-------------
+    let errorPassConnecte = document.getElementById("errorPassConnecte");
+    let passConnecte = document.getElementById("passConnecte");
+    let passValidConnecte = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[éèîï&ÉÈÎÏ])([a-zA-Z0-9éèîï&ÉÈÎÏ]{8,})$/;
 
-    let errorPass = document.getElementById("errorMotDePasse");
-    let Password = document.getElementById("motDePasse");
-    let PassValid = (/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[éèîï&ÉÈÎÏ])([a-zA-Z0-9éèîï&ÉÈÎÏ]{8,})$/);
-
-    if(Password.validity.valueMissing){
+    if(passConnecte.validity.valueMissing){
         event.preventDefault();
-        errorPass.textContent = "Mot passe manquant";
-        errorPass.style.color = "blue";
+        errorPassConnecte.textContent = "Mot passe manquant";
+        errorPassConnecte.style.color = "blue";
         testForm = false;
     }
-    else if (PassValid.test(Password.value)== false){
-     
+    else if (passValidConnecte.test(passConnecte.value)== false){
         event.preventDefault();
-        errorPass.textContent = "Format incorrect";
-        errorPass.style.color = "green";
+        errorPassConnecte.textContent = "Format incorrect";
+        errorPassConnecte.style.color = "green";
         testForm = false;
     }
     else{
-        errorPass.textContent = "";
+        errorPassConnecte.textContent = "";
+        testForm = true;
     }
 
     if(testForm == true)

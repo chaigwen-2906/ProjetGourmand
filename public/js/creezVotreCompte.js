@@ -26,7 +26,7 @@ function validationNomCreez(event){
         //stop l'envoie du formulaire 
         event.preventDefault();
         errorNomCreez.textContent = "Format incorrect";
-        errorNomCreez.style.color = "green";
+        errorNomCreez.style.color = "red";
     }
     else{
        // console.log("->valeur ok");
@@ -54,7 +54,7 @@ function validationPrenomCreez(event){
      else if (prenomValidCreez.test(prenomCreez.value)== false){
          event.preventDefault();
          errorPrenomCreez.textContent = "Format incorrect";
-         errorPrenomCreez.style.color = "green";
+         errorPrenomCreez.style.color = "red";
      }
      else{
         errorPrenomCreez.textContent = "";
@@ -103,7 +103,7 @@ function validationMobileCreez(event){
     else if (MobileValidCreez.test(MobileCreez.value)== false){
         event.preventDefault();
         errorMobileCreez.textContent = "Format incorrect";
-        errorMobileCreez.style.color = "green";
+        errorMobileCreez.style.color = "red";
     }
     else{
         errorMobileCreez.textContent = "";
@@ -127,7 +127,7 @@ function validationPasswordCreez(event){
     else if (PassValidCreez.test(PasswordCreez.value)== false){
         event.preventDefault();
         errorPassCreez.textContent = "Format incorrect";
-        errorPassCreez.style.color = "green";
+        errorPassCreez.style.color = "red";
     }
     else{
         errorPassCreez.textContent = "";
@@ -153,7 +153,7 @@ function validationPasswordConfirm(event){
     else if (PassValidConfirm.test(PasswordConfirm.value)== false){
         event.preventDefault();
         errorPassConfirm.textContent = "Format incorrect";
-        errorPassConfirm.style.color = "green";
+        errorPassConfirm.style.color = "red";
     }
     else{
         errorPassConfirm.textContent = "";
@@ -179,7 +179,7 @@ function validationDateDeNaissanceCreez(event){
     else if (DateValidCreez.test(DateDeNaissanceCreez.value)==false){
         event.preventDefault();//coupe l'envoie du formulaire
         errorDateCreez.textContent = "Format incorrect";
-        errorDateCreez.style.color = "green";
+        errorDateCreez.style.color = "red";
     }
     else{
         errorDateCreez.textContent="";

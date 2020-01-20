@@ -8,20 +8,22 @@
     <meta name="keywords" content="formation">
     <meta name="description" content="Les fins gourmets - Formation">
     <meta name="title" content="Les fins gourmets - Formation">
+    <meta http-equiv="expires" content="43200" />
 
     <title>Les fins gourmets - Nos formations</title>
 
     <!-- Appel des feuilles de style --/ Calling style sheets-->
-    <!--<link rel="stylesheet" href="public/css/header.css">
-    <link rel="stylesheet" href="public/css/footer.css">-->
-    <link rel="stylesheet" href="public/css/styles.css"  type="text/css" media="screen" >
 
-    <!---bootstrap-->
+    <link rel="stylesheet" href="public/css/header.css">
+    <link rel="icon" href="public/images/logos/favicon.ico" />
+    <!--<link rel="stylesheet" href="public/css/styles.css"  type="text/css" media="screen"-->
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-     <!--appel à fonttawesome-->
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">    
+    <!--appel à fonttawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
 
 </head>
 
@@ -35,27 +37,29 @@
         <a class="savoirPlus" href="https://www.cnil.fr/fr/site-web-cookies-et-autres-traceurs" target="_blank">En
             savoir plus</a>
     </div>
-    <a id="retourHaut" class="RetourHautPage"><img class="imgRetourHautPage" src="public/images/images/fleche_haut.png"></a>
+    <a id="retourHaut" class="RetourHautPage"><img class="imgRetourHautPage"
+        src="public/images/images/fleche_haut.png">
+    </a>
     <!--boite Modal-->
     <div id="myModalConnecter" class="modal fade" role="dialog">
-        <div class="modal-dialog"> 
+        <div class="modal-dialog">
             <!-- Modal content---------->
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title"> Connectez-vous à votre compte</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
-                 <div class="modal-body">
+                <div class="modal-body">
                     <form>
                         <figure>
                             <label class="bntAligne" for="email"> E-mail </label>
-                            <input type="email" name="email" id="mail_modal"required ><br />
+                            <input type="email" name="email" id="mailConnecte" required><br />
                             <span id="errorMailConnecte"></span>
                         </figure>
                         <figure>
                             <label class="bntAligne" for="motDePasse"> Mot de passe </label>
-                            <input type="password" name="motDePasse" id="motDePasse"required ><br />
-                            <span id="errorMotDePasse"></span>
+                            <input type="password" name="motDePasse" id="passConnecte" required><br />
+                            <span id="errorPassConnecte"></span>
                         </figure>
                         <a href="#">Mot de passe oublié ? </a>
                         <input class="boutonConnexion" id="modal_get" type="submit" value="Se connecter">
@@ -63,15 +67,17 @@
                 </div>
             </div>
         </div>
-    </div> 
+    </div>
     <header class="container-fluid">
-        <div class="container divTaille">
-            <div class="row">
-                <div class="col-12 col-md-2 " id="top">
-                    <img class="img-fluid" src="public/images/logos/les-fins-gourmets.png" alt="logo">
+        <div class="container-lg">
+            <div class="row d-flex">
+                <div class="col-lg-2 col-md-5 col-sm-4 colonneBandeau1">
+                    <img class="img-fluid" style="max-width: 120px;" src="public/images/logos/les-fins-gourmets.png"
+                        alt="logo">
                 </div>
-                <div class="col-12 col-md-7 divMenu">
-                    <nav class="navbar navbar-expand-md bg-dark grey  navbar-dark btnMenu">
+                <div
+                    class="col-lg-7 col-md-2 col-sm-2 colonneBandeau2 d-flex justify-content-center align-items-center">
+                    <nav class="d-flex justify-content-center bg-dark navbar-dark navbar navbar-expand-lg">
                         <!-- Toggler/collapsibe Button ///    bouton-->
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#collapsibleNavbar">
@@ -79,16 +85,16 @@
                         </button>
 
                         <!-- Links -->
-                        <div class="collapse navbar-collapse monMenu" id="collapsibleNavbar">
+                        <div class="collapse navbar-collapse" id="collapsibleNavbar">
                             <ul id="conteneurMenu" class="navbar-nav ulMenuBandeau">
                                 <li class="nav-item ml-2 mr-2">
-                                    <a class="nav-link text-light"  href="index.html">Accueil</a>
+                                    <a class="nav-link text-light" href="index.html">Accueil</a>
                                 </li>
                                 <li class="nav-item ml-2 mr-2">
                                     <a class="nav-link text-light" href="notreMarque.html">Notre marque</a>
                                 </li>
                                 <!-----------------<--menu déroulant-->
-                                <li class="nav-item dropdown">
+                                <li class="nav-item dropdown ml-2 mr-2">
                                     <a class="nav-link text-light dropdown-toggle" href="nosProduits.html"
                                         id="navbardrop" data-toggle="dropdown">
                                         Nos produits
@@ -119,89 +125,294 @@
                         </div>
                     </nav>
                 </div>
-                <div class="col-12 col-md-3  divBtnConnextion">
-                    <figure id="bloc_connexion" class="connexion text-light">  
-                        <a href="creezVotreCompte.html" class="identification">Créez votre compte</a>
-                        <a href="connecter.html" data-toggle="modal" data-target="#myModalConnecter"  class="identification">Se
+                <div class="col-lg-3 col-md-5 col-sm-5 colonneBandeau3 d-flex align-items-end flex-column">
+                    <figure id="bloc_connexion" class="d-flex flex-column align-items-start">
+                        <a href="creezVotreCompte.html" class="text-secondary">Créez votre compte</a>
+                        <a href="" data-toggle="modal" data-target="#myModalConnecter" class="text-secondary">Se
                             connecter</a>
                     </figure>
                     <!-- Bloc déconnexion - s'affiche en mode connecté -->
-                    <figure id="bloc_deconnexion" class="deconnexion text-light">
+                    <figure id="bloc_deconnexion" class="text-light">
                         <p>
                             Bonjour Lemoine Gwénola
                         </p>
-                        <img id="boutonPanier" class="imgPanier" src="public/images/images/panier.png" alt="Mon panier" title="Mon panier">
-                        <a href="index.html" class="fermer" id="btnSeDeconnecter" >Se déconnecter</a>
+                        <img id="boutonPanier" class="btn" src="public/images/images/panier.png" alt="Mon panier"
+                            title="Mon panier">
+                        <a href="index.html" class="text-secondary" id="btnSeDeconnecter">Se déconnecter</a>
                     </figure>
                 </div>
             </div>
         </div>
-        </div>
     </header>
-    <div id="laPage">
-        <main id="blog">
-            Nos formations !
-        </main>
-        <footer id="MentionFooter">
-            <!-- Menu du footer -->
-            <div class="reseaux">
-                <!-- Réseaux sociaux -->
-                <ul class="ulReseau">
-                    <!-- target="_blank" => ouvre dans un nouvel onglet-->
-                    <li><a href="https://www.facebook.com/" target="_blank"><img
-                                src="public/images/reseaux/facebook.png" alt="facebook" title="facebook"></a></li>
-                    <li><a href="https://www.instagram.com/" target="_blank"><img
-                                src="public/images/reseaux/instagram.png" alt="Instagram" title="Instagram"></a></li>
-                    <li><a href="https://twitter.com/accueil?lang=fr" target="_blank"><img
-                                src="public/images/reseaux/twitter.png" alt="twitter" title="twitter"> </a></li>
-                </ul>
+    <main id="formation">
+        <div class="container-fluid">
+            <div class="container">
+                <h1 class="text-center pb-3 pt-4">
+                    Nos Formations
+                </h1>
+                <h2 id="LesPates" class="h2border pb-2 mb-3 text-danger">
+                    L'atelier des chef
+                </h2>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6 mt-4">
+                        <img class="card-img-top" src="public/images/formations/croustillant-de-poisson.png"
+                            alt="croustillant poisson parseme epices tranches citron"
+                            title="croustillant poisson parseme epices tranches citron">
+                        <h3 class="mt-2 text-center">
+                            Mardi 31 décembre à 9h30
+                        </h3>
+                        <hr class="separator bg-success">
+                        <div class="card-body text-center">
+                            <h4 class="card-title ">1h30: Menu raffinés</h4>
+                            <p class="card-text">truffles au piment d'espelette</p>
+                            <p class="card-text">Croustillantde poisson parsemé d'épices</p>
+                            <p class="card-text">Assortiments de fruits déguisés</p>
+                            <p class="prix color-info">57€/pers</p>
+                            <hr class="separator bg-success">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 mt-4">
+                        <img class="card-img-top" src="public/images/formations/hamburger.png" alt="hamburger"
+                            title="hamburger">
+                        <h3 class="mt-2 text-center">
+                            Mercredi 8 janvier 18h30
+                        </h3>
+                        <hr class="separator bg-success">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">1h30: Menu fast-food</h4>
+                            <p class="card-text">hamburger au morbier accompagnées de légumes</p>
+                            <p class="card-text">hamburger Croustillant au foie gras</p>
+                            <p class="card-text">hamburger aux fruits déguisés</p>
+                            <p class="prix color-info">57€/pers</p>
+                            <hr class="separator bg-success">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 mt-4">
+                        <img class="card-img-top" src="public/images/formations/poulet-saute-noix-cajou-roties.jpg"
+                            alt="poulet saute noix cajou roties" title="poulet saute noix cajou roties">
+                        <h3 class="mt-2 text-center">
+                            Samedi 18 janvier à 10h30
+                        </h3>
+                        <hr class="separator bg-success">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">1h30: Menu d'exception</h4>
+                            <p class="card-text">truffles au piment d'espelette</p>
+                            <p class="card-text">Croustillant de poisson parsemé d'épices</p>
+                            <p class="card-text">Assortiments de fruits déguisés</p>
+                            <p class="prix color-info">57€/pers</p>
+                            <hr class="separator bg-success">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 mt-4">
+                        <img class="card-img-top" src="public/images/formations/rouleau-viande-aux-epices.jpg"
+                            alt="rouleau viande aux epices" title="rouleau viande aux epices">
+                        <h3 class="mt-2 text-center">
+                            Dimanche 16 fevrier à 10h30
+                        </h3>
+                        <hr class="separator bg-success">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">1h30: Parent/Enfant découverte</h4>
+                            <p class="card-text">truffles au piment d'espelette</p>
+                            <p class="card-text">Croustillantde poisson parsemé d'épices</p>
+                            <p class="card-text">Assortiments de fruits déguisés</p>
+                            <p class="prix color-info">57€/pers</p>
+                            <hr class="separator bg-success">
+                        </div>
+                    </div>
+                </div>
+                <div class="container mt-3">
+                    <!-- Button to Open the Modal -->
+                    <div class="row">
+                        <button type="button" class="btn btn-lg btn-primary " data-toggle="modal" data-target="#myModal">
+                            Réserver
+                        </button>
+                    </div>
+                    <!-- The Modal -->
+                    <div class="modal" id="myModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header justify-content-center">
+                                    <h4 class="modal-title ">
+                                        Les formations en cours!!
+                                    </h4>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <section class="col-lg-12 col-sm-12 col-md-12 col-xm-12">
+                                            <table class="table table-bordered table-striped table-condensed">
+                                                <thead>
+                                                    <tr class="text-center text-success">
+                                                        <th class="align-middle">Les menus</th>
+                                                        <th class="align-middle">Le prix</th>
+                                                        <th>Nombre de peronnes</th>
+                                                        <th class="align-middle">Montant</th>
+                                                    </tr>
+                                                </thead>
+                                                <tboby>
+                                                    <tr>
+                                                        <td>Menu raffinés </td>
+                                                        <th>57€/pers</th>
+                                                        <td class="text-center"><input type="number"
+                                                                id="nbPersMenuRaffines" class="text-center"
+                                                                name="nbPersMenuRaffines" value="0" min="0" max="10">
+                                                        </td>
+                                                        <td><input type="number" class="bg-#6c757d" id="MontantMenuRaffines" readonly
+                                                                min="0" max="570"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Menu fast-food</td>
+                                                        <th>44€/pers</th>
+                                                        <td class="text-center"><input type="number"
+                                                                id="nbPersMenuFast-food" class="text-center"
+                                                                name="nbPersMenuFast-food" value="0" min="0" max="10">
+                                                        </td>
+                                                        <td><input type="number" id="MontantMenuFast-food" readonly
+                                                                min="0" max="570"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Menu d'exception</td>
+                                                        <th>75€/pers</th>
+                                                        <td class="text-center"><input type="number"
+                                                                id="nbPersMenuException" class="text-center"
+                                                                name="nbPersMenuException" value="0" min="0" max="10">
+                                                        </td>
+                                                        <td>
+                                                            <input type="number" id="MontantMenuException" readonly
+                                                                min="0" max="570">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Menu Parent/Enfant découverte
+                                                        </td>
+                                                        <th class="align-middle">
+                                                            25€/pers
+                                                        </th>
+                                                        <td class="text-center align-middle">
+                                                            <input type="number" id="nbPersMenuDecouverte" class="text-center"
+                                                            name="nbPersMenuDecouverte" value="0" min="0" max="10">  
+                                                        </td>
+                                                        <td class="align-middle">
+                                                            <input type="number" id="MontantMenuDecouverte" readonly
+                                                            min="0" max="570">
+                                                        </td>
+                                                    </tr>
+                                                </tboby>
+                                            </table>
+                                        </section>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-sm-6 col-md-6 col-xm-6 text-right">
+                                            Montant total
+                                        </div>
+                                        <div class="col-lg-6 col-sm-6 col-md-6 col-xm-6 text-center">
+                                            <input  type="number" id="MontantTotal" readonly
+                                            min="0" max="1000">
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="row">
+                                        <!-- Modal footer bnt fermer -->
+                                        <div class="col-lg-4 col-sm-4 col-md-4 col-xm-4">
+                                            <button type="button" class="btn btn-danger"
+                                                data-dismiss="modal">Réinitialiser</button>
+                                        </div>
+                                        <!-- Modal footer -->
+                                        <div class="col-lg-4 col-sm-4 col-md-4 col-xm-4">
+                                            <button type="button" class="btn btn-danger"
+                                                data-dismiss="modal">Fermer</button>
+                                        </div>
+                                        <!-- Modal footer -->
+                                        <div class="col-lg-4 col-sm-4 col-md-4 col-xm-4">
+                                            <button type="button" class="btn btn-primary"
+                                                data-dismiss="modal">Ajouter au panier</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="menuFooter">
-                <nav>
-                    <ul>
-                        <li><a href="#">Evènements</a></li>
-                        <li><a href="#">Le nouveau bio</a></li>
-                        <li><a href="#">Notre formateur</a></li>
-                        <li><a href="#">Blog</a></li>
+        </div>
+        </div>
+    </main>
+    <footer class="container-fluid w-100 bg-rgb-(112, 17, 31) mt-3">
+        <div class="container">
+            <!-- Réseaux sociaux -->
+            <ul class="row pt-3 text-center list-unstyled">
+                <!-- target="_blank" => ouvre dans un nouvel onglet-->
+                <li class="col-4"><a href="https://www.facebook.com/" target="_blank"><img
+                            src="public/images/reseaux/facebook.png" alt="facebook" title="facebook"></a></li>
+                <li class="col-4"><a href="https://www.instagram.com/" target="_blank"><img
+                            src="public/images/reseaux/instagram.png" alt="Instagram" title="Instagram"></a></li>
+                <li class="col-4"><a href="https://twitter.com/accueil?lang=fr" target="_blank"><img
+                            src="public/images/reseaux/twitter.png" alt="twitter" title="twitter"> </a></li>
+            </ul>
+            <div class="row">
+                <nav class="col-6 border-left border-secondary">
+                    <ul class="text-left list-unstyled">
+                        <li><a class="text-secondary" href="#">Evènements</a></li>
+                        <li><a class="text-secondary" href="#">Le nouveau bio</a></li>
                     </ul>
                 </nav>
-                <!-- Mentions légales -->
-                <p class="mention">
-                    <a href="mentionsLegales.html">Mentions Legales </a>
-                    <a href="ConditionsGénérales.html">Conditions générales</a>
-                    <a href="RGPD.html">RGPD</a>
-                    <a href="planDuSite.html">Plan du site</a>
-                </p>
+                <nav class="col-6 border-right border-secondary">
+                    <ul class="text-right list-unstyled ">
+                        <li><a class="text-secondary" href="#">Notre formateur</a></li>
+                        <li><a class="text-secondary" href="#">Blog</a></li>
+                    </ul>
+                </nav>
             </div>
-            <div class="copyright">
+            <!-- Mentions légales -->
+            <nav class="pt-2 w-100">
+                <ul class="row d-flex justify-content-around w-100 list-unstyled p-0 m-0 text-center">
+                    <li class="col-md-3">
+                        <a class="text-white" href="mentionsLegales.html">Mentions Legales </a>
+                    </li>
+                    <li class="col-md-3">
+                        <a class="text-white" href="ConditionsGénérales.html">Conditions générales</a>
+                    </li>
+                    <li class="col-md-3">
+                        <a class="text-white" href="RGPD.html">RGPD</a>
+                    </li>
+                    <li class="col-md-3">
+                        <a class="text-white" href="planDuSite.html">Plan du site</a>
+                    </li>
+                </ul>
+            </nav>
+            <hr class="separator">
+            <div class="w-100 text-secondary text-center">
                 <p>
                     &copy; Les fins Gourmets 2019 / Développeur web: Lemoine Gwénola
                 </p>
             </div>
-        </footer>
-    </div>
-    <!--fin de #page-->
+        </div>
+    </footer>
 
     <!--<script type="text/javascript" src="public/js/optimiser.js" defer></script>-->
     <script type="text/javascript" src="public/js/header.js"></script>
 
     <!--class active-->
-    <script type= "text/javascript">
+    <script type="text/javascript">
         menuActive(3);
     </script>
 
 
     <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-        </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-        </script> 
+    </script>
 </body>
 
 </html>

@@ -1,104 +1,26 @@
-#notreMarque
+#notreMarque .about
 {
-    background-color: rgb(151, 149, 148);
+    background-color:rgb(177, 165, 160);
 }
-#notreMarque aside h1
-{
-    background-color: rgb(243, 212, 73);
-}
-#notreMarque aside h2
-{
-    text-align: left;
-    color:rgb(16, 75, 151);
-}
-#notreMarque aside p
-{
-    text-align: justify;
-}
-#notreMarque .queTrouver h3
-{
-    text-align: right;
-    color: rgb(16, 75, 151);
-}
-#notreMarque section p
-{
-    text-align: justify;
-}
-#notreMarque .queFaireDesEpices h3
-{
-    text-align: left;
-    color: rgb(16, 75, 151);
-}
-#notreMarque .lesFormateurs h3
-{
-    text-align: right;
-    color: rgb(16, 75, 151);
-}
-/*bannière*/
-.banner
-{
-    width: 100%;
-    max-width: 100%;
-}
-.ban 
-{
-    width: 100%;
-    max-width: 100%;
-    position: relative;
-}
-.ban img
-{
-    width: 100%;
-    max-width: 100%;
-    position: relative;
-}
-
-
 
 /*about*/
-#about h2
-{
-    text-align: center;
-}
-.about article
-{
-    margin-top: 10px;
-}
-.about article h2
-{
-    text-align: center;
-
-}
-.separator
+#notreMarque .separator
 {
     height: 3px;
     width: 5%;
-    border: none;
-    box-shadow: none;
     background-color:  rgb(243, 212, 73);
 }
-/*portfolio*/
 
+/*portfolio*/
 .portfolio 
 {
-    background-color: rgb(197, 189, 189);
-    
-}
-#portfolio
-{
-    text-align: center;
+    background-color: rgb(197, 189, 189); 
 }
 .portfolio .item-folio 
 { 
-    height:200px;
     background-color:rgb(177, 165, 160);
-    padding: 10px;
-    margin: 10px;
 }
-.item-folio 
-{
-    text-align: center;
-}
+
 
 
 

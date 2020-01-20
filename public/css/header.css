@@ -1,16 +1,10 @@
-
-a 
-{
-    text-decoration: none;
-    list-style-type: none;
-}
-
-
+/*bouton pour retourner en haut de la page*/
 .RetourHautPage
 {
     position: fixed;
     bottom:50px;
     right: 10px;
+    z-index: 2;
 }
 
 .imgRetourHautPage
@@ -18,157 +12,38 @@ a
     width: 45px;
     cursor: pointer;
 }
+/*-------------------*/
+
+/*body*/
+body
+{
+    background-color: rgb(197, 189, 189) !important; 
+}
+/*-------------------*/
+
+
+/*header*/
 header
 {
-    padding-right: 0 !important;
-    padding-left: 0 !important;
-}
-
-/* Bloc page  / Block page*/
-#laPage
-{
-    background-color: rgb(139, 157, 165);
-    width: 100%;
-    max-width: 1500px;
-    margin: 0 auto;
-    padding-top: 15px;
-}
-
-header .divTaille
-{
-    max-width: 1500px;
-    width: 100%;
-    background-color: rgb(112, 17, 31);
-    margin-top: 10px;
-}
-header .divMenu
-{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-header .divBtnConnextion
-{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-header #top img
-{
-    max-width: 150px;
-}
-
-header .identification
-{
-    color: grey;
-}
-header .fermer
-{
-    color: grey;
-}
-header .connexion
-{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-header .divBtnConnextion .imgPanier
-{
-    margin-right: 10px;
-    cursor: pointer;
-}
-header .navbar
-{
-    display: flex;
-    justify-content: flex-end;
-    background-color: grey;
+    background-color: rgb(112, 17, 31); 
 }
 
 /*-------------media querie mobile----------------*/
 @media screen and (max-width:576px)
 {
-    header #top
+    .colonneBandeau1, .colonneBandeau2
     {
-        max-width: 100%;
-        justify-content: center;
-        display: flex;
-        margin-bottom: 0px;
-        margin-top: 0px;
+        width:27% !important;
+        padding-right: 5px !important;
+        padding-left: 5px !important;
     }
-    header .btnMenu
+    .colonneBandeau3
     {
-        justify-content: center;
-    }
-
-    header .monMenu
-    {
-        text-align: center;
-    }
-    header .navbar-nav
-    {
-        margin-top: 10px;
-    }
-    header .divMenu
-     {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-     }
-    header .divBtnConnextion
-    {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 0px;
+        width:46% !important;
+        padding-right: 5px !important;
+        padding-left: 5px !important;
     }
 }
-
-
-
-
-/*---------------media querie tablette------------*/
-@media screen and (max-width: 992px)
-{
-    header #top
-    {
-        text-align: center;
-        margin-bottom: 10px;
-        margin-top: 10px;
-    }
-    header .btnMenu
-    {
-        justify-content: center;
-    }
-
-    header .monMenu
-    {
-        text-align: center;
-    }
-    header .divMenu
-     {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-     }
-    header .divBtnConnextion
-    {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 10px;
-    }
-}
-
-/*-------------media querie mobile----------------*/
-@media screen and (max-width:1150px)
-{
-    header .ulMenuBandeau
-    {
-        flex-direction: column !important; 
-    } 
-}
-
 
 /*Barre de cookies*/
 #cookies
@@ -217,9 +92,6 @@ header .navbar
     color: white;
 }
 
-
-
-
 /*------------------Class Active-------------------------------------*/
 .active, .nav-link:hover {
     background-color: #666;
@@ -242,7 +114,7 @@ header .navbar
 #myModalConnecter figure {
     width: 80%;
     margin: auto;
-        margin-top: auto;
+    margin-top: auto;
     margin-top: 10px;
 }
 #myModalConnecter .bntAligne {
@@ -269,3 +141,13 @@ header .navbar
     -o-border-radius: 3px;
     margin-bottom: 15px;
 }
+
+/*--------------footer--------*/
+footer.container-fluid
+{
+    background-color: rgb(112, 17, 31);  
+}
+/*------------------------------------*/
+
+
+
