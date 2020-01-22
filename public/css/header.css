@@ -28,6 +28,64 @@ header
     background-color: rgb(112, 17, 31); 
 }
 
+
+
+/*fils d'ariane*/
+#ariane a
+{
+    color: rgb(107, 99, 99);
+    text-decoration: none;
+}
+
+
+/* Slider ---- dans contact*/
+#contact .sectionSlider
+{
+   width: 80%;
+   position: relative; 
+}
+#contact .sectionSlider
+{
+   width: 100%;
+   text-align: center;
+}
+#contact .sectionSlider img
+{
+   width: 80%;
+}
+#contact .sectionSlider:hover .imgGauche
+{
+    display: block;
+}
+#contact .sectionSlider:hover .imgDroite
+{
+    display: block;
+}
+#contact .sectionSlider .imgGauche 
+{
+    width: 3%;
+    position: absolute;
+    top: 45%;
+    left: 180px;
+    cursor: pointer;
+    display: none;
+    opacity: 0.6;
+}
+#contact .sectionSlider .imgDroite 
+{
+    width: 3%;
+    position: absolute;
+    top: 45%;
+    right: 180px;
+    cursor: pointer;
+    display: none;
+    opacity: 0.6;
+}
+#contact-form h1
+{
+    color: rgb(112, 17, 31) ;
+}
+
 /*-------------media querie mobile----------------*/
 @media screen and (max-width:576px)
 {
