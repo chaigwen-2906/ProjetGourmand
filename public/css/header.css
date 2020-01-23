@@ -107,7 +107,7 @@ header
 #cookies
 {
     position: fixed;
-    top:0px;
+    top:0;
     width: 100%;
     text-align: center;
     background-color:#cfcfcf;
