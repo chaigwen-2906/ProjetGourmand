@@ -1,4 +1,4 @@
 plugins:
     csslint:
-        enabled: true
+      enabled: true
 
