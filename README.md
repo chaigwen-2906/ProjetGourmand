@@ -1,0 +1,1 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/1ea9d7391f87951c77ee/maintainability)](https://codeclimate.com/github/chaigwen-2906/ProjetGourmand/maintainability)

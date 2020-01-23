@@ -1,7 +1,7 @@
 //initialise le tableau img
-let tabImgSlider = ["public/images/slider/entreprise.jpg",
+let tabImgSlider = ["public/images/slider/voitureEntreprise.jpg",
     "public/images/slider/epicerie-rayons.jpg",
-    "public/images/slider/baieVerveine.jpg",
+    "public/images/slider/baieDeVerveine.jpg",
     "public/images/slider/masala.jpg",
     "public/images/slider/poivres.jpg",
     "public/images/slider/torsades-aux-epices.jpg",
