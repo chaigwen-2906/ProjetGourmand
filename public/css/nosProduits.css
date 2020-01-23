@@ -24,3 +24,11 @@
 {
      color:rgb(112, 17, 31) ;
 }
+#produits .card-img-top 
+{
+     border-radius: 10px !important;
+     -webkit-border-radius: 10px !important;
+     -moz-border-radius: 10px !important;
+     -ms-border-radius: 10px !important;
+     -o-border-radius: 10px !important;
+}
