@@ -20,7 +20,6 @@ if(sessionStorage.getItem('AcceptCookie'))
     }
 }
 
-
 /* ------------------------------------------Gestion du menu class Ative--------------------------------- */
 
 function menuActive(indexActive){
@@ -34,8 +33,6 @@ function menuActive(indexActive){
     //On ajoute la classe active sur l'élément dont l'index est indexActive
     tabElementLi[indexActive].className += " active";
 }
-
-
 
 /*----------------------------------------------- Gestion du panier------------------------------------------------- */
 
@@ -116,7 +113,6 @@ function validFormSeconnecter(){
         testForm = true;
     }
     
-    
     //---------------on teste le password-------------
     let errorPassConnecte = document.getElementById("errorPassConnecte");
     let passConnecte = document.getElementById("passConnecte");
@@ -131,7 +127,7 @@ function validFormSeconnecter(){
     else if (passValidConnecte.test(passConnecte.value)== false){
         event.preventDefault();
         errorPassConnecte.textContent = "Format incorrect";
-        errorPassConnecte.style.color = "green";
+        errorPassConnecte.style.color = "blue";
         testForm = false;
     }
     else{
@@ -146,7 +142,6 @@ function validFormSeconnecter(){
     }       
 }
 
-
 let btnSedeconnecter =document.querySelector("btnSeDeconnecter");
 btnSeDeconnecter.addEventListener("click", Deconnexion);
 
@@ -157,9 +152,21 @@ function Deconnexion(){
 }
 
 
-
-
-
+function validSomething(event, element, nomValid, output, prefix){
+    //si le champs est vide alors il ecrira: prenom manquant en bleu
+    if(element.validity.valueMissing){
+        event.preventDefault();
+        output.textContent = prefix + " manquant";
+        output.style.color = "red";
+    }
+    // si le format de données est incorrect
+     else if (nomValid.test(element.value)=== false){
+        //stop l'envoie du formulaire 
+        event.preventDefault();
+        output.textContent = "format incorrect";
+        output.style.color = "red";
+    }
+}
 
 
 /*----------------------------------------------------gestion du retour en haut -------------------------------------*/

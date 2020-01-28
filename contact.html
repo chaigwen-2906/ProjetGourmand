@@ -42,7 +42,7 @@
     <div id="myModalConnecter" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <!-- Modal content---------->
-            <div class="modal-content">
+            <div class="modal-content bg-info">
                 <div class="modal-header">
                     <h4 class="modal-title"> Connectez-vous à votre compte</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -51,17 +51,21 @@
                     <form>
                         <figure>
                             <label class="bntAligne" for="email"> E-mail </label>
-                            <input type="email" name="email" id="mailConnecte" required><br />
+                            <input class="btn btn-light" type="email" name="email" id="mailConnecte" placeholder="Votre Mail" required><br />
                             <span id="errorMailConnecte"></span>
                         </figure>
                         <figure>
-                            <label class="bntAligne" for="motDePasse"> Mot de passe </label>
-                            <input type="password" name="motDePasse" id="passConnecte" required><br />
+                            <label class="bntAligne " for="motDePasse"> Mot de passe </label>
+                            <input class="btn btn-light" type="password" name="motDePasse" id="passConnecte" placeholder=" Mot de passe" required><br />
                             <span id="errorPassConnecte"></span>
                         </figure>
-                        <a href="#">Mot de passe oublié ? </a>
-                        <a href="creezVotreCompte.html">Besoins d'un compte ? </a>
-                        <input class="boutonConnexion" id="modal_get" type="submit" value="Se connecter">
+                            <a href="#"  class="text-light">
+                                Mot de passe oublié ?  
+                             </a> 
+                            <a href="creezVotreCompte.html " class="text-light">
+                                Besoins d'un compte ? 
+                            </a>
+                       <input class="btn btn-light" id="modal_get" type="submit" value="Connectez-vous">
                     </form>
                 </div>
             </div>
@@ -71,7 +75,10 @@
         <div class="container-lg">
             <div class="row d-flex">
                 <div class="col-lg-2 col-md-5 col-sm-4 colonneBandeau1">
-                    <img class="img-fluid" style="max-width: 120px;" src="public/images/logos/les-fins-gourmets.png" alt="logo">
+                    <a href="index.html">
+                        <img class="img-fluid " style="max-width: 120px;" src="public/images/logos/les-fins-gourmets.png"
+                        alt="logo">
+                    </a>
                 </div>
                 <div class="col-lg-7 col-md-2 col-sm-2 colonneBandeau2 d-flex justify-content-center align-items-center">
                     <nav class="d-flex justify-content-center bg-dark navbar-dark navbar navbar-expand-lg">
@@ -142,13 +149,13 @@
         
     <main id="contact" >
         <div class="container">
-            <div id="ariane"class="col-12" >
+            <div id="ariane"class="col-12 pt-3" >
                 <a href="index.html">Accueil > </a>
                 Contact    
             </div>
         </div>
-        <section class="sectionSlider">
-            <img id="imgSlider">
+        <section class="sectionSlider ">
+            <img id="imgSlider" class="pt-3">
             <img id="gauche" class="imgGauche" src="public/images/images/flecheGauche.png">
             <img id="droite" class="imgDroite" src="public/images/images/flecheDroite.png">
         </section>
@@ -209,7 +216,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="form-group">
+                                <div id="pointEncrage" class="form-group">
                                     <label for="adresse">Votre adresse</label>
                                     <textarea  name="adresse" id="adresse" class="form-control"
                                         placeholder="Entrer votre adresse"></textarea>
@@ -224,7 +231,7 @@
                             </div>
                             <div class="col-md-12">
                                 <p class="bouton" >
-                                    <input class="btnContact" id="contact_get" type="submit" value="Envoyer">
+                                    <input class="btnContact" id="contact_get" type="submit"  onclick="envoieMessage()" value="Envoyer">
                                     <input class="btnContact" id="annuler" type="reset" value="Annuler">
                                 </p>
                                 <p class="font-italic">
@@ -254,7 +261,7 @@
                         <address class="mt-5 mb-5">
                             Plan d'accès <br/><br/>
                         </address>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2681.8216898796923!2d-3.120643484363977!3d47.765512879195576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4810410604462393%3A0x85551060753b5c00!2s4%20Rue%20du%20Narbond%2C%2056690%20Land%C3%A9vant!5e0!3m2!1sfr!2sfr!4v1574688319040!5m2!1sfr!2sfr"
+                        <iframe class=" w-100 h-50" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2681.8216898796923!2d-3.120643484363977!3d47.765512879195576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4810410604462393%3A0x85551060753b5c00!2s4%20Rue%20du%20Narbond%2C%2056690%20Land%C3%A9vant!5e0!3m2!1sfr!2sfr!4v1574688319040!5m2!1sfr!2sfr"
                         frameborder="0" allowfullscreen=""></iframe>
                     </map> 
                 </div>
@@ -279,13 +286,13 @@
             <div class="row">
                 <nav class="col-6 border-left border-secondary">
                     <ul class="text-left list-unstyled">
-                        <li><a class="text-secondary"  href="#">Evènements</a></li>
+                        <li><a class="text-secondary"  href="nosFormations.html">Evènements</a></li>
                         <li><a class="text-secondary"  href="#">Le nouveau bio</a></li>
                     </ul>
                 </nav>
                 <nav class="col-6 border-right border-secondary">
                     <ul class="text-right list-unstyled ">
-                        <li><a class="text-secondary" href="#">Notre formateur</a></li>
+                        <li><a class="text-secondary" href="notreMarque.html">Notre formateur</a></li>
                         <li><a class="text-secondary"  href="#">Blog</a></li>
                     </ul>
                 </nav>
@@ -319,10 +326,12 @@
             
       
     <!--<script type="text/javascript" src="public/js/optimiser.js" defer></script>-->
+    <script type="text/javascript" src="public/js/creds.js"></script>
     <script type="text/javascript" src="public/js/header.js"></script> 
     <script type="text/javascript" src="public/js/contact.js"></script>
     <script type="text/javascript" src="public/js/slider.js"></script>
     
+    <script type="text/javascript" src="public/js/adresse.js"></script>
 
     <!--class active-->
     <script type= "text/javascript">
@@ -341,6 +350,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
+
+    <!--code pour api message envoié jquery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+    </script>
+    
 
     </body>
 </html>

@@ -45,6 +45,10 @@
     font-size: 1.3rem ;
     color:rgb(112, 17, 31)
 }
+.modal-body div
+{
+    border-radius: 10px;
+}
 
 
 
