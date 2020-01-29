@@ -14,12 +14,50 @@
 /*portfolio*/
 .portfolio 
 {
-    background-color: rgb(197, 189, 189); 
+    background-color: rgb(197, 189, 189);
+   ;
 }
 .portfolio .item-folio 
-{ 
-    background-color:rgb(177, 165, 160);
+{
+    background-color:rgb(143, 136, 134);
+    border-radius:10px ;
+    -webkit-border-radius:10px ;
+    -moz-border-radius:10px ;
+    -ms-border-radius:10px ;
+    -o-border-radius:10px 
 }
+
+.item-folio img
+{
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding-top: 10px;
+}
+.item-folio a
+{
+    list-style-type: none;
+    color: white;
+}
+/* animationRonde */
+.animationRonde article img {
+    width: 200px;
+    height: 150px;
+    -webkit-filter: grayscale(0) blur(0px);
+    filter: grayscale(0) blur(0px);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+   
+  .animationRonde article:hover img {
+    width: 150px; /* on affiche l'image au carré */
+    height: 150px;
+    border-radius: 50%;  /* on arrondit l'image */
+    -webkit-transform: rotate(360deg); /* rotation de l'image */
+    transform: rotate(360deg);
+  }
 
 
 

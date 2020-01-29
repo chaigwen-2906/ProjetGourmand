@@ -42,7 +42,7 @@
     <div id="myModalConnecter" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <!-- Modal content---------->
-            <div class="modal-content">
+            <div class="modal-content bg-info">
                 <div class="modal-header">
                     <h4 class="modal-title"> Connectez-vous à votre compte</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -51,17 +51,21 @@
                     <form>
                         <figure>
                             <label class="bntAligne" for="email"> E-mail </label>
-                            <input type="email" name="email" id="mailConnecte" required><br />
+                            <input class="btn btn-light" type="email" name="email" id="mailConnecte" placeholder="Votre Mail" required><br />
                             <span id="errorMailConnecte"></span>
                         </figure>
                         <figure>
-                            <label class="bntAligne" for="motDePasse"> Mot de passe </label>
-                            <input type="password" name="motDePasse" id="passConnecte" required><br />
+                            <label class="bntAligne " for="motDePasse"> Mot de passe </label>
+                            <input class="btn btn-light" type="password" name="motDePasse" id="passConnecte" placeholder=" Mot de passe" required><br />
                             <span id="errorPassConnecte"></span>
                         </figure>
-                        <a href="#">Mot de passe oublié ? </a>
-                        <a href="creezVotreCompte.html">Besoins d'un compte ? </a>
-                        <input class="boutonConnexion" id="modal_get" type="submit" value="Se connecter">
+                            <a href="#"  class="text-light">
+                                Mot de passe oublié ?  
+                             </a> 
+                            <a href="creezVotreCompte.html " class="text-light">
+                                Besoins d'un compte ? 
+                            </a>
+                       <input class="btn btn-light" id="modal_get" type="submit" value="Connectez-vous">
                     </form>
                 </div>
             </div>
@@ -71,7 +75,10 @@
         <div class="container-lg">
             <div class="row d-flex">
                 <div class="col-lg-2 col-md-5 col-sm-4 colonneBandeau1">
-                    <img class="img-fluid" style="max-width: 120px;" src="public/images/logos/les-fins-gourmets.png" alt="logo">
+                    <a href="index.html">
+                        <img class="img-fluid" style="max-width: 120px;" src="public/images/logos/les-fins-gourmets.png"
+                        alt="logo">
+                    </a>
                 </div>
                 <div class="col-lg-7 col-md-2 col-sm-2 colonneBandeau2 d-flex justify-content-center align-items-center">
                     <nav class="d-flex justify-content-center bg-dark navbar-dark navbar navbar-expand-lg">
@@ -161,13 +168,13 @@
             <div class="row">
                 <nav class="col-6 border-left border-secondary">
                     <ul class="text-left list-unstyled">
-                        <li><a class="text-secondary"  href="#">Evènements</a></li>
+                        <li><a class="text-secondary"  href="nosFormations.html">Evènements</a></li>
                         <li><a class="text-secondary"  href="#">Le nouveau bio</a></li>
                     </ul>
                 </nav>
                 <nav class="col-6 border-right border-secondary">
                     <ul class="text-right list-unstyled ">
-                        <li><a class="text-secondary" href="#">Notre formateur</a></li>
+                        <li><a class="text-secondary" href="notreMarque.html">Notre formateur</a></li>
                         <li><a class="text-secondary"  href="#">Blog</a></li>
                     </ul>
                 </nav>

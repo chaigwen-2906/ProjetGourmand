@@ -1,11 +1,11 @@
 //initialise le tableau img
 let tabImgSlider = ["public/images/slider/voitureEntreprise.png",
-    "public/images/slider/epicerie-rayons.jpg",
-    "public/images/slider/baieDeVerveine.png",
-    "public/images/slider/masala.jpg",
-    "public/images/slider/poivres.jpg",
-    "public/images/slider/torsades-aux-epices.jpg",
-    "public/images/slider/fruit-en-poudre.jpg"];
+    "public/images/slider/assiette.png",
+    "public/images/slider/corneFruits.png",
+    "public/images/slider/panier.png",
+    "public/images/slider/raisinr.png",
+    "public/images/slider/tableCave.png",
+    "public/images/slider/epicerie.png"];
 let numImgSlider = 0;
 let imgSlider = document.getElementById("imgSlider");
 let gauche = document.getElementById("gauche");
