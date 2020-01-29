@@ -41,8 +41,8 @@
     list-style-type: none;
     color: white;
 }
-/* Morph */
-.morph article img {
+/* animationRonde */
+.animationRonde article img {
     width: 200px;
     height: 150px;
     -webkit-filter: grayscale(0) blur(0px);
@@ -51,7 +51,7 @@
     transition: all 0.5s ease;
   }
    
-  .morph article:hover img {
+  .animationRonde article:hover img {
     width: 150px; /* on affiche l'image au carré */
     height: 150px;
     border-radius: 50%;  /* on arrondit l'image */

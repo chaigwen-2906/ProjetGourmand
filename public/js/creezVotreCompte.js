@@ -1,14 +1,17 @@
 let formValidCreez = document.getElementById("boutonEnvoyerCreez");
+
 formValidCreez.addEventListener("click",function(event){
-    
+   
     validSomething(event, prenomCreez, prenomValidCreez, errorPrenomCreez, "prénom");
     validSomething(event, nomCreez, nomValidCreez, errorNomCreez, "nom");
     validSomething(event, emailCreez, mailValidCreez, errorMailCreez, "email");
     validSomething(event, mobileCreez, MobileValidCreez, errorMobileCreez, "mobile");
     validSomething(event, motDePasseCreez, PassValidCreez, errorMotDePasseCreez, "mot de passe");
     validSomething(event, motDePasseConfirm, PassValidConfirm, errorMotDePasseConfirm, "mot de passe");
-    validSomething(event, dateCreez, DateValidCreez, errorDateCreez, "date")
-})
+    validSomething(event, adresse, adresseValidCreez ,errorAdresse, "adresse");
+    validSomething(event, dateCreez, DateValidCreez, errorDateCreez, "date");
+   
+}) 
 // -----on test le prenom---------
 let prenomValidCreez = /^[a-zA-ZéèîïÉÈÎÏ]{2,}[a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/;
 
@@ -29,5 +32,8 @@ let PassValidConfirm = (/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[éèîï&ÉÈÎ
 
 //-----on teste la date de naissance---------
 let DateValidCreez = (/^[0-9]{2}[/]{1}[0-9]{2}[/]{1}[0-9]{4}$/);
+
+//-----on teste l'adresse--------
+let adresseValidCreez = (/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[éèîï&ÉÈÎÏ])([a-zA-Z0-9éèîï&ÉÈÎÏ]{30,})$/);
 
 

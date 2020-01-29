@@ -160,11 +160,14 @@ function validSomething(event, element, nomValid, output, prefix){
         output.style.color = "red";
     }
     // si le format de données est incorrect
-     else if (nomValid.test(element.value)=== false){
+    else if (nomValid.test(element.value)=== false){
         //stop l'envoie du formulaire 
         event.preventDefault();
         output.textContent = "format incorrect";
         output.style.color = "red";
+    }
+    else{
+        output.textContent = "";
     }
 }
 
@@ -179,6 +182,18 @@ function retourneEnHaut(){
     //scroll 0.0 veut dire: horizon && vertical
     window.scrollTo(0,0);
 }
+
+/*
+$(function(){
+    var duration = 500;
+    $('#retourHaut').click(function(event) {
+        // Un clic provoque le retour en haut animé.
+        event.preventDefault();
+        $('html, body').animate({scrollTop: 0}, duration);
+        return false;
+    });
+});
+*/
 
 /* Affichage du bouton retour en haut*/
 
