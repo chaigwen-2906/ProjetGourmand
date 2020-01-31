@@ -1,3 +1,10 @@
+$(function() {
+    $( "#dateCreez" ).datepicker();
+    $( "#dateCreez" ).datepicker( "option", "showAnim", "clip" );
+    $( "#dateCreez" ).datepicker( "option", "duration", "slow" );
+});
+
+
 let formValidCreez = document.getElementById("boutonEnvoyerCreez");
 
 formValidCreez.addEventListener("click",function(event){
@@ -36,4 +43,32 @@ let DateValidCreez = (/^[0-9]{2}[/]{1}[0-9]{2}[/]{1}[0-9]{4}$/);
 //-----on teste l'adresse--------
 let adresseValidCreez = (/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[éèîï&ÉÈÎÏ])([a-zA-Z0-9éèîï&ÉÈÎÏ]{30,})$/);
 
+
+/*saisie de l'adresse avec 5 dans l'historique */
+function search(){
+    let adresse = document.getElementById("adresse").value
+
+    if(adresse != "")
+    {
+        fetch('https://api-adresse.data.gouv.fr/search/?q='+ adresse)
+        .then(response => response.json())
+        .then(function(response){
+
+            let tableauResultat = new Array(0);
+
+            for (let i=0; i<6; i++){
+
+                //On récupère la valeur
+                let uneAdresse = response.features[i].properties.label;
+                //J'ajoute la valeur au tableau tableauResultat
+                tableauResultat.push(uneAdresse);
+               
+                $( "#adresse" ).autocomplete({
+                    minLength: 2,
+                    source: tableauResultat
+                });
+            }
+        })
+    }  
+}
 
