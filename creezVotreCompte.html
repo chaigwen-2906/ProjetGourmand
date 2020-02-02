@@ -18,9 +18,6 @@
     <link rel="icon" href="public/images/logos/favicon.ico"/>
     <!--<link rel="stylesheet" href="public/css/styles.css"  type="text/css" media="screen"-->
 
-    <!-- JQUERY CSS -->
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -136,8 +133,8 @@
                 </div>
                 <div class="col-lg-3 col-md-5 col-sm-5 colonneBandeau3 d-flex align-items-end flex-column">
                     <figure id="bloc_connexion" class="d-flex flex-column align-items-start">
-                        <a href="creezVotreCompte.html" class="text-info m-2">Créez votre compte</a>
-                        <a href="" data-toggle="modal" data-target="#myModalConnecter" class="text-info m-2">Se
+                        <a href="creezVotreCompte.html" class="text-secondary">Créez votre compte</a>
+                        <a href="" data-toggle="modal" data-target="#myModalConnecter" class="text-secondary">Se
                             connecter</a>
                     </figure>
                     <!-- Bloc déconnexion - s'affiche en mode connecté -->
@@ -147,7 +144,7 @@
                         </p>
                         <img id="boutonPanier" class="btn" src="public/images/images/panier.png" alt="Mon panier"
                             title="Mon panier">
-                        <a href="index.html" class="text-info" id="btnSeDeconnecter">Se déconnecter</a>
+                        <a href="index.html" class="text-secondary" id="btnSeDeconnecter">Se déconnecter</a>
                     </figure>
                 </div>
             </div>
@@ -228,9 +225,9 @@
                         </div>
                         <div class="row">
                             <div class=" col-12">
-                                <div class="form-group ">
+                                <div class="form-group">
                                     <label for="adresse"> Votre adresse</label>
-                                    <input type="text" name="adresse" id="adresse" onkeyup="search()" class="form-control" placeholder="Entrer votre adresse" required />
+                                    <input type="adresse" name="adresse" id="adresse" class="form-control" placeholder="Entrer votre adresse" required />
                                     <span id="errorAdresse"></span>
                                 </div>
                             </div>
@@ -239,8 +236,7 @@
                             <div class=" col-12">
                                 <div class="form-group">
                                     <label for="date">Votre date de naissance</label>
-                                    <!--<input type="date" name="date" id="dateCreez" class="form-control" placeholder="Ex: 31/06/2019" required />-->
-                                    <input type="text" name="date" id="dateCreez" class="form-control" placeholder="Ex: 31/06/2019" required />
+                                    <input type="date" name="date" id="dateCreez" class="form-control" placeholder="Ex: 31/06/2019" required />
                                     <span id="errorDateCreez"></span>
                                 </div>
                             </div>
@@ -347,6 +343,12 @@
         </div>
     </footer>
 
+    <!--<script type="text/javascript" src="public/js/optimiser.js" defer></script>-->
+    <script type="text/javascript" src="public/js/header.js"></script>
+    <script type="text/javascript" src="public/js/creezVotreCompte.js"></script>
+
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -358,12 +360,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-    <!--<script type="text/javascript" src="public/js/optimiser.js" defer></script>-->
-    <script type="text/javascript" src="public/js/header.js"></script>
-    <script type="text/javascript" src="public/js/creezVotreCompte.js"></script>
 </body>
 
 </html>
