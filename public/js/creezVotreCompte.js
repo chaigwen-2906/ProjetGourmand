@@ -1,3 +1,10 @@
+$(function() {
+    $( "#dateCreez" ).datepicker();
+    $( "#dateCreez" ).datepicker( "option", "showAnim", "clip" );
+    $( "#dateCreez" ).datepicker( "option", "duration", "slow" );
+});
+
+
 let formValidCreez = document.getElementById("boutonEnvoyerCreez");
 
 formValidCreez.addEventListener("click",function(event){
@@ -8,7 +15,6 @@ formValidCreez.addEventListener("click",function(event){
     validSomething(event, mobileCreez, MobileValidCreez, errorMobileCreez, "mobile");
     validSomething(event, motDePasseCreez, PassValidCreez, errorMotDePasseCreez, "mot de passe");
     validSomething(event, motDePasseConfirm, PassValidConfirm, errorMotDePasseConfirm, "mot de passe");
-    validSomething(event, adresse, adresseValidCreez ,errorAdresse, "adresse");
     validSomething(event, dateCreez, DateValidCreez, errorDateCreez, "date");
    
 }) 
@@ -33,7 +39,61 @@ let PassValidConfirm = (/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[éèîï&ÉÈÎ
 //-----on teste la date de naissance---------
 let DateValidCreez = (/^[0-9]{2}[/]{1}[0-9]{2}[/]{1}[0-9]{4}$/);
 
-//-----on teste l'adresse--------
-let adresseValidCreez = (/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[éèîï&ÉÈÎÏ])([a-zA-Z0-9éèîï&ÉÈÎÏ]{30,})$/);
 
+
+
+/*saisie de l'adresse avec 5 dans l'historique */
+function search(){
+    let adresse = document.getElementById("adresse").value
+
+    if(adresse != "")
+    {
+        //On génère l'autocomplétion sur le champ adresse
+        $("#adresse").autocomplete({
+            //on adapte la source d'autocompletion
+            source: function (request, response) {
+                //On effectue la requete AJAX vers l'API adresse
+                $.ajax({
+                    //url d'appel
+                    url: 'https://api-adresse.data.gouv.fr/search/?', 
+                    //paramètre en entré de la fonction search de l'API adresse
+                    data: { q: adresse}, 
+                    //type de donnée attendu en sortie
+                    dataType: "json", 
+                    //En cas de succès que fait-on?
+                    success: function (data) { 
+                        // on parcours les features de notre réponse
+                        response($.map(data.features, function (item) {
+                            //Pour chaque feature on récupère la propriété  properties.label
+                            console.log(item.properties.label); 
+                            //on retourne l'élément dans la liste d'autocompletion
+                            return { label: item.properties.label, value: item.properties.label}; 
+                        }));
+                    }
+                });
+            }
+        });
+
+
+        /*fetch('https://api-adresse.data.gouv.fr/search/?q='+ adresse)
+        .then(response => response.json())
+        .then(function(response){
+
+            let tableauResultat = new Array(0);
+
+            for (let i=0; i<6; i++){
+
+                //On récupère la valeur
+                let uneAdresse = response.features[i].properties.label;
+                //J'ajoute la valeur au tableau tableauResultat
+                tableauResultat.push(uneAdresse);
+               
+                $( "#adresse" ).autocomplete({
+                    minLength: 2,
+                    source: tableauResultat
+                });
+            }
+        })*/
+    }  
+}
 

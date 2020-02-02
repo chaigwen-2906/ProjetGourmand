@@ -18,6 +18,9 @@
     <link rel="icon" href="public/images/logos/favicon.ico"/>
     <!--<link rel="stylesheet" href="public/css/styles.css"  type="text/css" media="screen"-->
 
+    <!-- JQUERY CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -131,8 +134,8 @@
                 </div>
                 <div class="col-lg-3 col-md-5 col-sm-5 colonneBandeau3 d-flex align-items-end flex-column">
                     <figure id="bloc_connexion" class="d-flex flex-column align-items-start">
-                        <a href="creezVotreCompte.html" class="text-secondary">Créez votre compte</a>
-                        <a href="" data-toggle="modal" data-target="#myModalConnecter" class="text-secondary">Se connecter</a>
+                        <a href="creezVotreCompte.html" class="text-info m-2">Créez votre compte</a>
+                        <a href="" data-toggle="modal" data-target="#myModalConnecter" class="text-info m-2">Se connecter</a>
                     </figure>
                     <!-- Bloc déconnexion - s'affiche en mode connecté -->
                     <figure id="bloc_deconnexion" class="text-light">
@@ -140,7 +143,7 @@
                             Bonjour Lemoine Gwénola
                         </p>
                         <img id="boutonPanier" class="btn" src="public/images/images/panier.png" alt="Mon panier" title="Mon panier">
-                        <a href="index.html" class="text-secondary" id="btnSeDeconnecter">Se déconnecter</a>
+                        <a href="index.html" class="text-info" id="btnSeDeconnecter">Se déconnecter</a>
                     </figure>
                 </div>
             </div>
@@ -218,8 +221,8 @@
                             <div class="col-md-12">
                                 <div id="pointEncrage" class="form-group">
                                     <label for="adresse">Votre adresse</label>
-                                    <textarea  name="adresse" id="adresse" class="form-control"
-                                        placeholder="Entrer votre adresse"></textarea>
+                                    <input type="text" name="adresse" id="adresse" class="form-control"
+                                     placeholder="Entrer votre adresse" required />
                                 </div>
                             </div>
                             <div class="col-md-12">
@@ -231,7 +234,7 @@
                             </div>
                             <div class="col-md-12">
                                 <p class="bouton" >
-                                    <input class="btnContact" id="contact_get" type="submit"  onclick="envoieMessage()" value="Envoyer">
+                                    <input class="btnContact" id="contact_get" type="submit" value="Envoyer">
                                     <input class="btnContact" id="annuler" type="reset" value="Annuler">
                                 </p>
                                 <p class="font-italic">
@@ -324,18 +327,17 @@
     </footer>
 
             
-      
-    <!--<script type="text/javascript" src="public/js/optimiser.js" defer></script>-->
+       <!--<script type="text/javascript" src="public/js/optimiser.js" defer></script>-->
     <script type="text/javascript" src="public/js/creds.js"></script>
     <script type="text/javascript" src="public/js/header.js"></script> 
     <script type="text/javascript" src="public/js/contact.js"></script>
     <script type="text/javascript" src="public/js/slider.js"></script>
-    <script type="text/javascript" src="public/js/adresse.js"></script>
 
     <!--class active-->
     <script type= "text/javascript">
         menuActive(4);
     </script>
+    
     
     
     <!-- Optional JavaScript -->
@@ -349,11 +351,15 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <!--code pour api message envoié jquery-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
     </script>
+
+   
     
 
     </body>

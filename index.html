@@ -134,8 +134,8 @@
                 </div>
                 <div class="col-lg-3 col-md-5 col-sm-5 colonneBandeau3 d-flex align-items-end flex-column">
                     <figure id="bloc_connexion" class="d-flex flex-column align-items-start">
-                        <a href="creezVotreCompte.html" class="text-info">Créez votre compte maintenant</a>
-                        <a href="" data-toggle="modal" data-target="#myModalConnecter" class=" text-info">Se
+                        <a href="creezVotreCompte.html" class="text-info m-2 ">Créez votre compte </a>
+                        <a href="" data-toggle="modal" data-target="#myModalConnecter" class=" text-info m-2">Se
                             connecter</a>
                     </figure>
                     <!-- Bloc déconnexion - s'affiche en mode connecté -->
@@ -145,7 +145,7 @@
                         </p>
                         <img id="boutonPanier" class="btn" src="public/images/images/panier.png" alt="Mon panier"
                             title="Mon panier">
-                        <a href="index.html" class="text-secondary" id="btnSeDeconnecter">Se déconnecter</a>
+                        <a href="index.html" class="text-info" id="btnSeDeconnecter">Se déconnecter</a>
                     </figure>
                 </div>
             </div>
@@ -242,7 +242,7 @@
                         <div class="row mr-2 border border-secondary rounded">
                             <article class="col-12 text-center">
                                 <h3 class="descriptionFormateur pt-3">
-                                    Notre Formateur
+                                    NOTRE FORMATEUR
                                 </h3>
                                 <img class="imagesFormateur w-75 pt-2 pb-2" src="public/images/images/formateur.jpg">
                                 <p class="paraFormateur text-justify">
@@ -283,31 +283,19 @@
                 <figure class="row">
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 mb-3 text-center ">
                         <h6 class="">Cours de cuisine avec un chef!</h6>
-                        <video controls class="w-100">
-                            <source src="public/videos/video1.mp4" type="video/mp4">
-                            <p>Votre navigateur ne prend pas en charge les vidéos HTML5.</p>
-                        </video>
+                        <div id="player1"></div>
                     </div>
                     <div class="6 col-lg-3 col-md-6 col-sm-6 col-xs-12 mb-3 text-center">
                         <h6 class="">Apprendre à éplucher les légumes!</h6>
-                        <video controls class="w-100">
-                            <source src="public/videos/video2.mp4" type="video/mp4">
-                            <p>Votre navigateur ne prend pas en charge les vidéos HTML5.</p>
-                        </video>
+                        <div id="player2"></div>
                     </div>
                     <div class="6 col-lg-3 col-md-6 col-sm-6 col-xs-12 mb-3 text-center">
                         <h6 class="">Envie de passer votre CAP</h6>
-                        <video controls class="w-100">
-                            <source src="public/videos/Passer son CAP cuisine.mp4" type="video/mp4">
-                            <p>Votre navigateur ne prend pas en charge les vidéos HTML5.</p>
-                        </video>
+                        <div id="player3"></div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 mb-3 text-center">
                         <h6 class="">Apprendre à ciseler les légumes</h6>
-                        <video controls class="w-100">
-                        <source src="public/videos/video4.mp4" type="video/mp4">
-                        <p>Votre navigateur ne prend pas en charge les vidéos HTML5.</p>
-                        </video>
+                        <div id="player4"></div>
                     </div>
                 </figure>
             </div>
@@ -372,6 +360,9 @@
     <!-- Appel du javascript  / Call of javascript-->
     <!--<script type="text/javascript" src="public/js/optimiser.js" defer></script>-->
     <script type="text/javascript" src="public/js/header.js"></script>
+    <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+    <script type="text/javascript" src="public/js/index.js"></script>
+
     
 
     <!--class active-->
