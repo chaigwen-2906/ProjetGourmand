@@ -31,7 +31,7 @@ function envoieMessage() { // methode post j'envoie un message
     let nom = document.getElementById("nom").value;
     let adresse = document.getElementById("adresse").value;
     let e_mail = document.getElementById("e_mail").value;
-    
+    //console.log(token);
 
     $.ajax({
         data: {
@@ -45,10 +45,10 @@ function envoieMessage() { // methode post j'envoie un message
         type: "Post",
         url: apiUrl,
         error: function (error) {
-            console.log("error: " + error);
+           // console.log("error: " + error);
         },
         success: function (data) {
-            console.log("resultat" + data);
+          //  console.log("resultat" + data);
         },
     });
 }
