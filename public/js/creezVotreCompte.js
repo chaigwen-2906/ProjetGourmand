@@ -46,7 +46,7 @@ let DateValidCreez = (/^[0-9]{2}[/]{1}[0-9]{2}[/]{1}[0-9]{4}$/);
 function search(){
     let adresse = document.getElementById("adresse").value
 
-    if(adresse != "")
+    if(adresse != "")//test adress est différent de vide
     {
         //On génère l'autocomplétion sur le champ adresse
         $("#adresse").autocomplete({

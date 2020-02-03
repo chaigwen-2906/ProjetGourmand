@@ -31,24 +31,31 @@ function envoieMessage() { // methode post j'envoie un message
     let nom = document.getElementById("nom").value;
     let adresse = document.getElementById("adresse").value;
     let e_mail = document.getElementById("e_mail").value;
-    
+    //console.log(token);
 
     $.ajax({
+        //url de la requete
+        url: apiUrl, 
+        //methode d'attaque
+        type: "Post", 
+        //paramètre de données en entrée
         data: {
             "token":token,
             "channel": channel,
             "text":"Mon adresse"+ " " + e_mail + "\n" + "je m'appel " + prenon + " " + nom + "\n"
             + "et j'habite " + adresse + " " + text,// on peut aussi en mettre plusieurs(text + " " + text1)
-        },
-
-        dataType: "text",
-        type: "Post",
-        url: apiUrl,
+        }, 
+        //type de données attendu en sortie
+        dataType: "text", 
+        //Gestion du cas d'erreur
         error: function (error) {
-            console.log("error: " + error);
+            alert("Nous sommes désolé, une erreur s'est produite");
+           // console.log("error: " + error);
         },
+        //Gestion du cas succes
         success: function (data) {
-            console.log("resultat" + data);
+            alert("Votre message a bien été envoyé");
+          //  console.log("resultat" + data);
         },
     });
 }
